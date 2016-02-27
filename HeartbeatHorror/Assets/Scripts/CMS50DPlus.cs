@@ -7,6 +7,7 @@ public class CMS50Dplus {
 
 	private string port;
 	private SerialPort conn;
+	public LiveDataPoint latest;
 
 	public CMS50Dplus(string port) {
 		this.port = port;
@@ -16,7 +17,7 @@ public class CMS50Dplus {
 		return conn != null && conn.IsOpen;
 	}
 
-	void connect() {
+	public void connect() {
 		if (conn == null) {
 			int baudrate = 19200;
 			conn = new SerialPort(port, baudrate, Parity.Odd, 8, StopBits.One);
@@ -30,7 +31,7 @@ public class CMS50Dplus {
 
 	}
 
-	void disconnect() {
+	public void disconnect() {
 		if (isConnected()) {
 			conn.Close();
 		}
@@ -44,17 +45,20 @@ public class CMS50Dplus {
 			try {
 				conn.Read(packet, 0, 5);
 			}catch (TimeoutException){
-				Debug.Log("timeout");
+				//Debug.Log("timeout");
 				timeout = true;
 			}
 			if (timeout) {
+				//latest = null;
 				yield return null;
 			}
 			else {
 				if (Convert.ToBoolean(packet[0] & 0x80)) {
-					yield return new LiveDataPoint(DateTime.UtcNow, packet);
+					//yield return new LiveDataPoint(DateTime.Now, packet);
+					latest = new LiveDataPoint(DateTime.Now, packet);
 				}
 			}	
+			yield return null;
 		}
 	}
 }
