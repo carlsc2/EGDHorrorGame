@@ -8,6 +8,7 @@ public class CMS50Dplus {
 	private string port;
 	private SerialPort conn;
 	public LiveDataPoint latest;
+	public bool fingerOut = false;
 
 	public CMS50Dplus(string port) {
 		this.port = port;
@@ -39,25 +40,53 @@ public class CMS50Dplus {
 
 	public IEnumerator getLiveData() {
 		connect();
+
+		byte[] packet = { 0, 0, 0, 0, 0 };
+		int idx = 0;
+		byte[] buffer = { 0, 0, 0, 0, 0 };
+
 		while (true) {
-			byte[] packet = { 0, 0, 0, 0, 0 };
-			bool timeout = false;
+			int bytesRead = 0;
+			byte b = 0;
+			bool pass = false;
 			try {
-				conn.Read(packet, 0, 5);
-			}catch (TimeoutException){
-				//Debug.Log("timeout");
-				timeout = true;
+				bytesRead = conn.Read(buffer, 0, 5);
 			}
-			if (timeout) {
-				//latest = null;
+			catch (TimeoutException) {
+				pass = true;
+			}
+
+			if (pass) {
 				yield return null;
+				continue;
 			}
-			else {
-				if (Convert.ToBoolean(packet[0] & 0x80)) {
-					//yield return new LiveDataPoint(DateTime.Now, packet);
-					latest = new LiveDataPoint(DateTime.Now, packet);
+
+			for (int i = 0; i < bytesRead; i++) { 
+				b = buffer[i];
+				if (Convert.ToBoolean(b & 0x80)) {
+					if (idx == 5 && Convert.ToBoolean(packet[0] & 0x80)) {
+						latest = new LiveDataPoint(DateTime.Now, packet);
+					}
+					packet[0] = 0;
+					packet[1] = 0;
+					packet[2] = 0;
+					packet[3] = 0;
+					packet[4] = 0;
+					idx = 0;
 				}
-			}	
+
+				if (idx < 5) {
+					packet[idx] = b;
+					idx += 1;
+				}
+			}
+
+			buffer[0] = 0;
+			buffer[1] = 0;
+			buffer[2] = 0;
+			buffer[3] = 0;
+			buffer[4] = 0;
+
 			yield return null;
 		}
 	}
@@ -80,10 +109,10 @@ public class LiveDataPoint {
 	public LiveDataPoint(DateTime time, byte[] data) {
 		if (
 			(((data[0] & 0x80) != 0) != true) &&
-			(((data[0] & 0x80) != 0) != false) &&
-			(((data[0] & 0x80) != 0) != false) &&
-			(((data[0] & 0x80) != 0) != false) &&
-			(((data[0] & 0x80) != 0) != false)
+			(((data[1] & 0x80) != 0) != false) &&
+			(((data[2] & 0x80) != 0) != false) &&
+			(((data[3] & 0x80) != 0) != false) &&
+			(((data[4] & 0x80) != 0) != false)
 			) throw new Exception("Invalid data packet.");
 
 		this.time = time;
