@@ -8,7 +8,6 @@ public class CMS50Dplus {
 	private string port;
 	private SerialPort conn;
 	public LiveDataPoint latest;
-	public bool fingerOut = false;
 
 	public CMS50Dplus(string port) {
 		this.port = port;
