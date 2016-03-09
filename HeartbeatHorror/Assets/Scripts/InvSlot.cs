@@ -7,7 +7,13 @@ public class InvSlot : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+
+    public void AddItem(Item item) { 
+    
+    }
+    public void RemoveItem(Item item) { 
+    
+    }
 	// Update is called once per frame
 	void Update () {
 	
