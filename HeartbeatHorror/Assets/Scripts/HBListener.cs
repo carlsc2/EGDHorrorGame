@@ -16,9 +16,9 @@ public class HBListener : MonoBehaviour {
 	public int windowsize = 50; //look at last N measurements
 	private int[] dataBuffer; //buffer for average heartbeats
 	private int index = 0;
-
 	public int avgPulse = 0;
-
+	public int outPulse;
+    public string port = "COM3";
 
 	void calc_avg() {
 		int sum = 0;
@@ -32,7 +32,7 @@ public class HBListener : MonoBehaviour {
 	void Start() {
 		dataBuffer = new int[windowsize];
 		//foreach (string s in SerialPort.GetPortNames()) print(s);
-		listener = new CMS50Dplus("COM4");
+		listener = new CMS50Dplus(port);
 		StartCoroutine(listener.getLiveData());
 		StartCoroutine(receiveData());
 	}
@@ -51,8 +51,12 @@ public class HBListener : MonoBehaviour {
 			calc_avg();
 			print("tick: " + DateTime.Now);
 			print("average: " + avgPulse);
-			//if (point != null && !listener.fingerOut) print("fingerOut: " + point.fingerOut + " pulseRate: " + point.pulseRate + " time: " + point.time);
-			//else print("disconnect");
+
+            if (point != null && !listener.fingerOut){
+                print("fingerOut: " + point.fingerOut + " pulseRate: " + point.pulseRate + " time: " + point.time);
+                outPulse = point.pulseRate;
+            }
+            else print("disconnect");
 			yield return new WaitForSeconds(.1f);
 		}
 	}
