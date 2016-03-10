@@ -92,6 +92,7 @@
 				float2 q = uv;
 
 				q.x += 1;
+				q.y *= 2;
 
 				float strength = floor(q.x + 1.);
 				float T3 = max(3., 1.25*strength)*_Time * 25;
