@@ -82,7 +82,7 @@ public class HBListener : Singleton<HBListener> {
 				}
 			}
 			else {
-				//print("disconnect");
+				//print("powered off");
 				connected = false;
 			}			
 			yield return new WaitForSeconds(1.0f / measurements_per_second);

@@ -23,7 +23,12 @@ public class CMS50Dplus {
 			conn = new SerialPort(port, baudrate, Parity.Odd, 8, StopBits.One);
 			conn.ReadTimeout = 5;
 			conn.Handshake = Handshake.XOnXOff;
-			conn.Open();
+			try {
+				conn.Open();
+			}
+			catch (System.IO.IOException) {
+				Debug.Log("Please connect device");
+			}
 		}
 		else if (!isConnected()) {
 			conn.Open();
@@ -39,54 +44,58 @@ public class CMS50Dplus {
 
 	public IEnumerator getLiveData() {
 		connect();
+		if (isConnected()) {
+			byte[] packet = { 0, 0, 0, 0, 0 };
+			int idx = 0;
+			byte[] buffer = { 0, 0, 0, 0, 0 };
 
-		byte[] packet = { 0, 0, 0, 0, 0 };
-		int idx = 0;
-		byte[] buffer = { 0, 0, 0, 0, 0 };
+			while (true) {
+				int bytesRead = 0;
+				byte b = 0;
+				bool pass = false;
+				try {
+					bytesRead = conn.Read(buffer, 0, 5);
+				}
+				catch (TimeoutException) {
+					pass = true;
+				}
 
-		while (true) {
-			int bytesRead = 0;
-			byte b = 0;
-			bool pass = false;
-			try {
-				bytesRead = conn.Read(buffer, 0, 5);
-			}
-			catch (TimeoutException) {
-				pass = true;
-			}
+				if (pass) {
+					yield return null;
+					continue;
+				}
 
-			if (pass) {
-				yield return null;
-				continue;
-			}
-
-			for (int i = 0; i < bytesRead; i++) { 
-				b = buffer[i];
-				if (Convert.ToBoolean(b & 0x80)) {
-					if (idx == 5 && Convert.ToBoolean(packet[0] & 0x80)) {
-						latest = new LiveDataPoint(DateTime.Now, packet);
+				for (int i = 0; i < bytesRead; i++) {
+					b = buffer[i];
+					if (Convert.ToBoolean(b & 0x80)) {
+						if (idx == 5 && Convert.ToBoolean(packet[0] & 0x80)) {
+							latest = new LiveDataPoint(DateTime.Now, packet);
+						}
+						packet[0] = 0;
+						packet[1] = 0;
+						packet[2] = 0;
+						packet[3] = 0;
+						packet[4] = 0;
+						idx = 0;
 					}
-					packet[0] = 0;
-					packet[1] = 0;
-					packet[2] = 0;
-					packet[3] = 0;
-					packet[4] = 0;
-					idx = 0;
+
+					if (idx < 5) {
+						packet[idx] = b;
+						idx += 1;
+					}
 				}
 
-				if (idx < 5) {
-					packet[idx] = b;
-					idx += 1;
-				}
+				buffer[0] = 0;
+				buffer[1] = 0;
+				buffer[2] = 0;
+				buffer[3] = 0;
+				buffer[4] = 0;
+
+				yield return null;
 			}
-
-			buffer[0] = 0;
-			buffer[1] = 0;
-			buffer[2] = 0;
-			buffer[3] = 0;
-			buffer[4] = 0;
-
-			yield return null;
+		}
+		else {
+			Debug.Log("Cannot start listener; not connected.");
 		}
 	}
 }
