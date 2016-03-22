@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 457954}
   - 33: {fileID: 3395210}
   - 23: {fileID: 2397754}
+  - 114: {fileID: 11499850}
   m_Layer: 0
   m_Name: lamp
   m_TagString: Untagged
@@ -67,7 +68,7 @@ GameObject:
   - 82: {fileID: 8220916}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +114,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149068}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.5985268, z: 0, w: 0.8011028}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -567,6 +568,7 @@ MonoBehaviour:
   min_intensity: 1
   max_intensity: 1.5
   flickerSpeed: 0.035
+  candleMat: {fileID: 2100000, guid: dde716144eb362f42a151209b71b23f2, type: 2}
 --- !u!114 &11481990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -582,6 +584,20 @@ MonoBehaviour:
   radius: {x: 1, y: 1}
   angle: 0
   center: {x: 0.5, y: 0.5}
+--- !u!114 &11499850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca114378eedd4ce4c8edfd0ce79183cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nearDist: 10
+  farDist: 20
+  candleMat: {fileID: 2100000, guid: dde716144eb362f42a151209b71b23f2, type: 2}
 --- !u!136 &13633868
 CapsuleCollider:
   m_ObjectHideFlags: 1
