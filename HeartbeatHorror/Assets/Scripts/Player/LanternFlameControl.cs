@@ -14,7 +14,7 @@ public class LanternFlameControl : MonoBehaviour {
 	
 	void Update () {
 		float dist = Vector3.Distance(transform.position, monster.position);
-		float val = 1 - ((dist - nearDist) / farDist);
+		float val = 1 - ((dist - nearDist) / (farDist - nearDist));
 		val = Mathf.Clamp01(val);
 		candleMat.SetFloat("_Color", val);
 	}
