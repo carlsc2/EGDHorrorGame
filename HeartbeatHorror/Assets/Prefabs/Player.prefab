@@ -149,6 +149,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 413330}
   - 114: {fileID: 11462868}
+  - 114: {fileID: 11456108}
+  - 114: {fileID: 11481130}
   m_Layer: 0
   m_Name: Lantern
   m_TagString: Untagged
@@ -269,8 +271,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149068}
-  m_LocalRotation: {x: 0, y: -0.5985268, z: 0, w: 0.8011028}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.46, y: 1, z: -1.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 448708}
@@ -285,7 +287,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156698}
   m_LocalRotation: {x: 0, y: -0.5985268, z: 0, w: 0.8011028}
-  m_LocalPosition: {x: 0, y: -0.031999946, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 413330}
@@ -824,8 +826,8 @@ MonoBehaviour:
     XSensitivity: 2
     YSensitivity: 2
     clampVerticalRotation: 1
-    MinimumX: -90
-    MaximumX: 90
+    MinimumX: -60
+    MaximumX: 60
     smooth: 0
     smoothTime: 5
     lockCursor: 1
@@ -912,6 +914,19 @@ MonoBehaviour:
   max_intensity: 1.5
   flickerSpeed: 0.035
   candleMat: {fileID: 2100000, guid: dde716144eb362f42a151209b71b23f2, type: 2}
+--- !u!114 &11456108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de16bd066cb3ab4183bf8a3014d2993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 448708}
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!114 &11462868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -926,6 +941,19 @@ MonoBehaviour:
   nearDist: 10
   farDist: 20
   candleMat: {fileID: 2100000, guid: dde716144eb362f42a151209b71b23f2, type: 2}
+--- !u!114 &11481130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de16bd066cb3ab4183bf8a3014d2993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 448708}
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!114 &11481990
 MonoBehaviour:
   m_ObjectHideFlags: 1

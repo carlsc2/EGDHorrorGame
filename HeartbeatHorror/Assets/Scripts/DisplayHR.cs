@@ -12,7 +12,7 @@ public class DisplayHR : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rate.text = listen.outPulse.ToString();
+		rate.text = "baseline: " + listen.base_rate + "\nbpm: " + listen.outPulse;
 	
 	}
 }

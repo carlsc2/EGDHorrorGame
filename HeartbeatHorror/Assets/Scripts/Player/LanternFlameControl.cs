@@ -9,13 +9,16 @@ public class LanternFlameControl : MonoBehaviour {
 	public Material candleMat;
 
 	void Start () {
+		candleMat.SetFloat("_Color", 0);
 		monster = GameObject.FindGameObjectWithTag("Monster").transform;
 	}
 	
 	void Update () {
-		float dist = Vector3.Distance(transform.position, monster.position);
-		float val = 1 - ((dist - nearDist) / (farDist - nearDist));
-		val = Mathf.Clamp01(val);
-		candleMat.SetFloat("_Color", val);
+		if(monster != null) {
+			float dist = Vector3.Distance(transform.position, monster.position);
+			float val = 1 - ((dist - nearDist) / (farDist - nearDist));
+			val = Mathf.Clamp01(val);
+			candleMat.SetFloat("_Color", val);
+		}
 	}
 }
