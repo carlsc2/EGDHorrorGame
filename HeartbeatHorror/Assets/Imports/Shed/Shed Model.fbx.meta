@@ -1,32 +1,24 @@
 fileFormatVersion: 2
-guid: fdfbdc4375202f54baf6e681eb903b4d
-timeCreated: 1458702274
+guid: 379df1505689aa241a8d560fd76144c6
+timeCreated: 1458842327
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Mesh1_Lisanne1_Model
-    100004: Mesh2_Model
-    100006: Mesh3_Model
-    100008: Mesh4_Model
-    400000: //RootNode
-    400002: Mesh1_Lisanne1_Model
-    400004: Mesh2_Model
-    400006: Mesh3_Model
-    400008: Mesh4_Model
-    2300000: Mesh1_Lisanne1_Model
-    2300002: Mesh2_Model
-    2300004: Mesh3_Model
-    2300006: Mesh4_Model
-    3300000: Mesh1_Lisanne1_Model
-    3300002: Mesh2_Model
-    3300004: Mesh3_Model
-    3300006: Mesh4_Model
-    4300000: Mesh1_Lisanne1_Model
-    4300002: Mesh2_Model
-    4300004: Mesh3_Model
-    4300006: Mesh4_Model
+    100000: Lisanne1
+    100002: Mesh1
+    100004: Mesh2
+    100006: //RootNode
+    400000: Lisanne1
+    400002: Mesh1
+    400004: Mesh2
+    400006: //RootNode
+    2300000: Mesh1
+    2300002: Mesh2
+    3300000: Mesh1
+    3300002: Mesh2
+    4300000: Mesh1
+    4300002: Mesh2
   materials:
     importMaterials: 1
     materialName: 0
