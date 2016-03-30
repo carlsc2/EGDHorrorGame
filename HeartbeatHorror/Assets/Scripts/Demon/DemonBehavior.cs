@@ -81,7 +81,7 @@ public class DemonBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		check_line_of_sight();
-		/*
+		
 		if (playerInSight) {//if player in sight, chase the player
 			RotateTowards(player);
 			agent.SetDestination(player.position);
@@ -95,7 +95,7 @@ public class DemonBehavior : MonoBehaviour {
 		else if(!playerInRange){//wander larger area
 			wanderpoint = (Random.onUnitSphere * sightDistance * 5) + transform.position;
 			agent.SetDestination(wanderpoint);
-		}*/
+		}
 
 
 
