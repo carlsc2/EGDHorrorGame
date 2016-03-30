@@ -4,15 +4,16 @@ using System.Collections;
 public class TriggerVolume : MonoBehaviour {
     public AudioClip sound;
     public AudioSource source;
-    
+
     
     
     BoxCollider col;
-    [Range(0, 10)]
+    [Range(1, 10)]
     public int triggerRate;
     
-    public bool playSound;
+    public bool playOnEnter;
     public bool eventTrigger;
+    public bool playOnRate;
 
 
     private bool triggered;
@@ -25,20 +26,26 @@ public class TriggerVolume : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	 
 	}
 
     void OnTriggerEnter( Collider other) {
-        if (playSound)
+        if (playOnEnter)
         {
             source.PlayOneShot(sound);
         }
-
         if(eventTrigger){
-
-            TriggerEvent();
+        TriggerEvent();
         }
 
+        if (playOnRate)
+        {
+            if (HBListener.Instance.avgPulse > HBListener.Instance.base_rate * (1 + triggerRate / 100))
+            {
+                source.PlayOneShot(sound);
+            }
+        }
+        
     }
 
 

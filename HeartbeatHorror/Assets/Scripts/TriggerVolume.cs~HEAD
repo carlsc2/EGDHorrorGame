@@ -4,7 +4,7 @@ using System.Collections;
 public class TriggerVolume : MonoBehaviour {
     public AudioClip sound;
     public AudioSource source;
-
+    
     
     
     BoxCollider col;
@@ -32,6 +32,11 @@ public class TriggerVolume : MonoBehaviour {
         if (playSound)
         {
             source.PlayOneShot(sound);
+        }
+
+        if(eventTrigger){
+
+            TriggerEvent();
         }
 
     }
