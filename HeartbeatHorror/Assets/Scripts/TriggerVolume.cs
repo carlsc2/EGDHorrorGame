@@ -7,7 +7,7 @@ public class TriggerVolume : MonoBehaviour {
 
     
     
-    BoxCollider col;
+    SphereCollider col;
     [Range(1, 10)]
     public int triggerRate;
     
@@ -19,7 +19,7 @@ public class TriggerVolume : MonoBehaviour {
     private bool triggered;
 	// Use this for initialization
 	void Start () {
-        col = GetComponent<BoxCollider>();
+        col = GetComponent<SphereCollider>();
         source = GetComponent<AudioSource>();
 
 	}
