@@ -2,25 +2,25 @@
 using System.Collections;
 
 public class TriggerVolume : MonoBehaviour {
-    public AudioClip sound;
-    public AudioSource source;
+	public AudioClip sound;
+	public AudioSource source;
 
-    
-    
-    SphereCollider col;
-    [Range(1, 10)]
-    public int triggerRate;
-    
-    public bool playOnEnter;
-    public bool eventTrigger;
-    public bool playOnRate;
+	
+	
+	SphereCollider col;
+	[Range(1, 10)]
+	public int triggerRate;
+	
+	public bool playOnEnter;
+	public bool eventTrigger;
+	public bool playOnRate;
 
 
-    private bool triggered;
+	private bool triggered;
 	// Use this for initialization
 	void Start () {
-        col = GetComponent<SphereCollider>();
-        source = GetComponent<AudioSource>();
+		col = GetComponent<SphereCollider>();
+		source = GetComponent<AudioSource>();
 
 	}
 	
@@ -29,26 +29,26 @@ public class TriggerVolume : MonoBehaviour {
 	 
 	}
 
-    void OnTriggerEnter( Collider other) {
-        if (playOnEnter)
-        {
-            source.PlayOneShot(sound);
-        }
-        if(eventTrigger){
-        TriggerEvent();
-        }
+	void OnTriggerEnter( Collider other) {
+		if (playOnEnter)
+		{
+			source.PlayOneShot(sound);
+		}
+		if(eventTrigger){
+		TriggerEvent();
+		}
 
-        if (playOnRate)
-        {
-            if (HBListener.Instance.avgPulse > HBListener.Instance.base_rate * (1 + triggerRate / 100))
-            {
-                source.PlayOneShot(sound);
-            }
-        }
-        
-    }
+		if (playOnRate)
+		{
+			if (HBListener.Instance.avgPulse > HBListener.Instance.base_rate * (1 + triggerRate / 100))
+			{
+				source.PlayOneShot(sound);
+			}
+		}
+		
+	}
 
 
-    void TriggerEvent() { 
-    }
+	void TriggerEvent() { 
+	}
 }
