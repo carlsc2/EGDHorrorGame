@@ -1,26 +1,36 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.Events;
 
+[RequireComponent(typeof( AudioSource))]
 public class TriggerVolume : MonoBehaviour {
-	public AudioClip sound;
-	public AudioSource source;
+    public AudioClip sound;
+    public AudioSource source;
 
-	
-	
-	SphereCollider col;
-	[Range(1, 10)]
-	public int triggerRate;
-	
-	public bool playOnEnter;
-	public bool eventTrigger;
-	public bool playOnRate;
+    public UnityEvent triggerEvent;
+    
+    
+   // SphereCollider col;
+    [Range(1, 10)]
+    public int triggerRate;
+    
+    public bool playOnEnter;
+    public bool eventTrigger;
+    public bool playOnRate;
 
+    public bool playSound;
 
-	private bool triggered;
+    public bool playOnce;
+    private bool triggered;
+
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+       // triggerEvent.AddListener(source.Play);
+    }
 	// Use this for initialization
 	void Start () {
-		col = GetComponent<SphereCollider>();
-		source = GetComponent<AudioSource>();
+       // col = GetComponent<SphereCollider>();
 
 	}
 	
@@ -29,26 +39,71 @@ public class TriggerVolume : MonoBehaviour {
 	 
 	}
 
-	void OnTriggerEnter( Collider other) {
-		if (playOnEnter)
-		{
-			source.PlayOneShot(sound);
-		}
-		if(eventTrigger){
-		TriggerEvent();
-		}
+    void OnTriggerEnter(Collider other)
+    {
+        if (playOnce && !triggered)
+        {
+            if (playOnEnter)
+            {
+                source.PlayOneShot(sound);
+            }
+            if (eventTrigger)
+            {
+                triggerEvent.Invoke();
+            }
 
-		if (playOnRate)
-		{
-			if (HBListener.Instance.avgPulse > HBListener.Instance.base_rate * (1 + triggerRate / 100))
-			{
-				source.PlayOneShot(sound);
-			}
-		}
-		
-	}
+            if (playOnRate)
+            {
+                if (HBListener.Instance.avgPulse > HBListener.Instance.base_rate * (1 + triggerRate / 100))
+                {
+
+                    if (playSound)
+                    {
+                        source.PlayOneShot(sound);
+                    }
+
+                    if (eventTrigger)
+                    {
+                        triggerEvent.Invoke();
+                    }
+                }
+            }
+
+            triggered = true;
+        }
+        else
+        {
+            if (playOnEnter)
+            {
+                source.PlayOneShot(sound);
+            }
+            if (eventTrigger)
+            {
+                triggerEvent.Invoke();
+            }
+
+            if (playOnRate)
+            {
+                if (HBListener.Instance.avgPulse > HBListener.Instance.base_rate * (1 + triggerRate / 100))
+                {
+
+                    if (playSound)
+                    {
+                        source.PlayOneShot(sound);
+                    }
+
+                    if (eventTrigger)
+                    {
+                        triggerEvent.Invoke();
+                    }
+                }
+            }
+        }
+    }
 
 
-	void TriggerEvent() { 
-	}
+    void TriggerEvent() {
+       // triggeredObject.GetComponent<Trigger>();
+
+    }
 }
