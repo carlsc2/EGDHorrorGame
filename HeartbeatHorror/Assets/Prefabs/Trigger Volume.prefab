@@ -8,9 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 463208}
-  - 65: {fileID: 6511236}
-  - 114: {fileID: 11441384}
+  - 135: {fileID: 13548624}
   - 82: {fileID: 8218638}
+  - 114: {fileID: 11445168}
   m_Layer: 0
   m_Name: Trigger Volume
   m_TagString: Untagged
@@ -25,23 +25,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.407, y: 0, z: 14.851685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!65 &6511236
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125176}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.2978776, y: 2.5305824, z: 1.2901989}
-  m_Center: {x: -0.6489388, y: 0.7652912, z: -0.14509946}
 --- !u!82 &8218638
 AudioSource:
   m_ObjectHideFlags: 1
@@ -52,7 +40,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -116,7 +104,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &11441384
+--- !u!114 &11445168
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -124,14 +112,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 125176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a54d6dd5f222e843a5b9e6ac60e6966, type: 3}
+  m_Script: {fileID: 11500000, guid: 7225e52de4ca1a4418bf3ec861765850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: ac546ab05d3a2be4f8c23d4892847cad, type: 3}
+  sound: {fileID: 0}
   source: {fileID: 0}
-  triggerRate: 0
-  playSound: 1
-  eventTrigger: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  triggerRate: 1
+  playOnEnter: 1
+  eventTrigger: 1
+  playOnRate: 0
+  playSound: 0
+  playOnce: 0
+--- !u!135 &13548624
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

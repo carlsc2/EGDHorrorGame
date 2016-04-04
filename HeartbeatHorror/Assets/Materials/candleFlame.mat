@@ -90,7 +90,7 @@ Material:
       data:
         first:
           name: _Color
-        second: 0
+        second: 1
       data:
         first:
           name: _Cutoff
