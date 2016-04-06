@@ -25,6 +25,18 @@ ModelImporter:
     100034: Stairs___3_3
     100036: Mesh10
     100038: WellforMansion
+    100040: Lisanne5
+    100042: Mansion_Roof1
+    100044: Mesh11
+    100046: Mesh12
+    100048: Mesh13
+    100050: Mesh14
+    100052: Mesh15
+    100054: Mesh16
+    100056: Stairs___3_4
+    100058: Stairs___3_5
+    100060: Stairs___3_6
+    100062: Stairs___3_7
     400000: Basement1
     400002: Lisanne1
     400004: Lisanne2
@@ -45,6 +57,18 @@ ModelImporter:
     400034: Stairs___3_3
     400036: Mesh10
     400038: WellforMansion
+    400040: Lisanne5
+    400042: Mansion_Roof1
+    400044: Mesh11
+    400046: Mesh12
+    400048: Mesh13
+    400050: Mesh14
+    400052: Mesh15
+    400054: Mesh16
+    400056: Stairs___3_4
+    400058: Stairs___3_5
+    400060: Stairs___3_6
+    400062: Stairs___3_7
     2300000: Mesh1
     2300002: Mesh2
     2300004: Mesh3
@@ -55,6 +79,12 @@ ModelImporter:
     2300014: Mesh8
     2300016: Mesh9
     2300018: Mesh10
+    2300020: Mesh11
+    2300022: Mesh12
+    2300024: Mesh13
+    2300026: Mesh14
+    2300028: Mesh15
+    2300030: Mesh16
     3300000: Mesh1
     3300002: Mesh2
     3300004: Mesh3
@@ -65,6 +95,12 @@ ModelImporter:
     3300014: Mesh8
     3300016: Mesh9
     3300018: Mesh10
+    3300020: Mesh11
+    3300022: Mesh12
+    3300024: Mesh13
+    3300026: Mesh14
+    3300028: Mesh15
+    3300030: Mesh16
     4300000: Mesh1
     4300002: Mesh2
     4300004: Mesh3
@@ -75,6 +111,28 @@ ModelImporter:
     4300014: Mesh8
     4300016: Mesh9
     4300018: Mesh10
+    4300020: Mesh11
+    4300022: Mesh12
+    4300024: Mesh13
+    4300026: Mesh14
+    4300028: Mesh15
+    4300030: Mesh16
+    6400000: Mesh1
+    6400002: Mesh10
+    6400004: Mesh11
+    6400006: Mesh12
+    6400008: Mesh13
+    6400010: Mesh14
+    6400012: Mesh15
+    6400014: Mesh16
+    6400016: Mesh2
+    6400018: Mesh3
+    6400020: Mesh4
+    6400022: Mesh5
+    6400024: Mesh6
+    6400026: Mesh7
+    6400028: Mesh8
+    6400030: Mesh9
   materials:
     importMaterials: 1
     materialName: 0
@@ -101,7 +159,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 100
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

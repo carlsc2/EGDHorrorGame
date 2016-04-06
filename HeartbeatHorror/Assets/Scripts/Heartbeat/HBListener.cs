@@ -1,12 +1,6 @@
 ﻿using UnityEngine;
-using System.Net.Sockets;
-using System.Net;
 using System.Collections;
 using System.Collections.Generic;
-using System.Text;
-using System;
-
-using System.IO.Ports;
 
 
 public class HBListener : Singleton<HBListener> {
@@ -27,7 +21,9 @@ public class HBListener : Singleton<HBListener> {
 	public bool connected = false;
 	public int base_rate = -1; //baseline heart rate
 
-	private bool calibrating = false;
+	public float calibration_interval = 300;//every X seconds, recalibrate the base rate
+	private float last_calibration_time = -1000;
+	public bool calibrated = false;
 
 	void calc_avg() {
 		int sum = 0;
@@ -35,54 +31,41 @@ public class HBListener : Singleton<HBListener> {
 			sum += dataBuffer[i];
 		}
 		avgPulse = sum / windowsize;
-
 	}
 
 	void Start() {
 		avgPulse = outPulse = -1;
 		windowsize = (int)(avg_window * measurements_per_second);
 		dataBuffer = new int[windowsize];
-		//foreach (string s in SerialPort.GetPortNames()) print(s);
 		listener = new CMS50Dplus(port);
 		StartCoroutine(listener.getLiveData());
 		StartCoroutine(receiveData());
-		recalibrate();
-	}
-
-	public void recalibrate() {
-		if(!calibrating) StartCoroutine(calibration());
+		StartCoroutine(calibration());
 	}
 
 	IEnumerator receiveData() {
 		print("reading");
-
 		LiveDataPoint point = null;
 		while (true) {
 			point = listener.latest;
-
-			//print("index: " + index + " tick: " + DateTime.Now);
-
 			if (point != null) {
 				connected = true;
 				if (point.fingerOut || point.pulseRate == 0) {
-					outPulse = -1;
-					avgPulse = -1;
+					//outPulse = -1;
+					//avgPulse = -1;
 					ticks = 0;
 				}
 				else {
 					ticks += 1;
 					index = ++index % windowsize;
 					dataBuffer[index] = point.pulseRate;
-					//print("fingerOut: " + point.fingerOut + " pulseRate: " + point.pulseRate + " time: " + point.time);
 					outPulse = point.pulseRate;
 					if (ticks > windowsize) {
 						calc_avg();
 					}
-					//print("average: " + avgPulse);
 				}
 			}
 			else {
-				//print("powered off");
 				connected = false;
 			}			
 			yield return new WaitForSeconds(1.0f / measurements_per_second);
@@ -90,25 +73,44 @@ public class HBListener : Singleton<HBListener> {
 	}
 
 	IEnumerator calibration() {
-		calibrating = true;
-		while (!connected || outPulse==-1) {
-			yield return null;
+		while (true) {
+			calibrated = true;
+			while (!connected || outPulse == -1) {//wait for a connection to be established before calibrating
+				yield return null;
+			}
+			print("Calibration start");
+			bool interrupted = false;
+			List<int> calibration_buffer = new List<int>();
+			float start_time = Time.time;
+			while (Time.time - start_time < calibration_time) {
+				if(!connected || outPulse == -1) {//reset calibration if interrupted
+					print("Calibration interrupted");
+					interrupted = true;
+					break;
+				}
+				calibration_buffer.Add(outPulse);
+				yield return new WaitForSeconds(1.0f / measurements_per_second);
+			}
+			if (interrupted) {
+				continue;
+			}
+			int sum = 0;
+			foreach (int val in calibration_buffer) {
+				sum += val;
+			}
+			base_rate = sum / calibration_buffer.Count;
+			print("Baseline calibrated: " + base_rate);
+			calibrated = false;
+			last_calibration_time = Time.time;
+			//wait for interval before recalibrating or start immediately if interrupted while waiting
+			while (Time.time - last_calibration_time < calibration_interval) {
+				if (!connected || outPulse == -1 || base_rate / avgPulse > 1.15f) {//recalibrate if interrupted or if current is 15% below baseline
+					break;
+				}
+				yield return new WaitForSeconds(1);
+			}
+			
 		}
-		print("Calibration start");
-		List<int> calibration_buffer = new List<int>();
-		float start_time = Time.time;
-		while (Time.time - start_time < calibration_time) {
-			calibration_buffer.Add(outPulse);
-			yield return new WaitForSeconds(1.0f / measurements_per_second);
-		}
-		int sum = 0;
-		foreach (int val in calibration_buffer) {
-			sum += val;
-		}
-		base_rate = sum / calibration_buffer.Count;
-		print("Baseline calibrated: " + base_rate);
-		calibrating = false;
-
 	}
 
 
@@ -116,6 +118,6 @@ public class HBListener : Singleton<HBListener> {
 		base.OnDestroy();
 		//close serial port
 		listener.disconnect();
-		print("disconnected from port: " + port);
+		print("disconnecting from port: " + port);
 	}
 }

@@ -46,6 +46,7 @@ GameObject:
   - 20: {fileID: 2003414}
   - 81: {fileID: 8167892}
   - 114: {fileID: 11481990}
+  - 114: {fileID: 11474126}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -135,6 +136,22 @@ GameObject:
   - 114: {fileID: 11434422}
   m_Layer: 0
   m_Name: light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &169694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 425718}
+  - 182: {fileID: 18207466}
+  m_Layer: 0
+  m_Name: windzone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,15 +288,28 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149068}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.46, y: 1, z: -1.61}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 1, z: 295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 448708}
   - {fileID: 448008}
   - {fileID: 413330}
+  - {fileID: 425718}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &425718
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.09, z: 0.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 425238}
+  m_RootOrder: 3
 --- !u!4 &443592
 Transform:
   m_ObjectHideFlags: 1
@@ -374,7 +404,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -925,7 +955,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de16bd066cb3ab4183bf8a3014d2993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 448708}
   startPos: {x: 0, y: 0, z: 0}
 --- !u!114 &11462868
 MonoBehaviour:
@@ -941,6 +970,25 @@ MonoBehaviour:
   nearDist: 10
   farDist: 20
   candleMat: {fileID: 2100000, guid: dde716144eb362f42a151209b71b23f2, type: 2}
+--- !u!114 &11474126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b5ec6153a1d55438228df10fe66844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceFog: 1
+  excludeFarPixels: 0
+  useRadialDistance: 1
+  heightFog: 0
+  height: 1
+  heightDensity: 0.001
+  startDistance: 250
+  fogShader: {fileID: 4800000, guid: 70d8568987ac0499f952b54c7c13e265, type: 3}
 --- !u!114 &11481130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -952,7 +1000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de16bd066cb3ab4183bf8a3014d2993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 448708}
   startPos: {x: 0, y: 0, z: 0}
 --- !u!114 &11481990
 MonoBehaviour:
@@ -999,6 +1046,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!182 &18207466
+WindZone:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169694}
+  m_Enabled: 1
+  m_Mode: 1
+  m_Radius: 1
+  m_WindMain: 2
+  m_WindTurbulence: 0
+  m_WindPulseMagnitude: 1
+  m_WindPulseFrequency: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
