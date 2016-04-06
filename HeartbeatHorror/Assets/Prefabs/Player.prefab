@@ -30,7 +30,7 @@ GameObject:
   - 23: {fileID: 2373404}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,7 +738,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.232
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -987,7 +987,7 @@ MonoBehaviour:
   heightFog: 0
   height: 1
   heightDensity: 0.001
-  startDistance: 250
+  startDistance: 1
   fogShader: {fileID: 4800000, guid: 70d8568987ac0499f952b54c7c13e265, type: 3}
 --- !u!114 &11481130
 MonoBehaviour:
