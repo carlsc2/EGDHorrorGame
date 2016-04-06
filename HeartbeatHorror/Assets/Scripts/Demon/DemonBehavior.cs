@@ -8,7 +8,7 @@ public class DemonBehavior : MonoBehaviour {
 	private UnityStandardAssets.Characters.FirstPerson.FirstPersonController pcontrol;
 	private AudioSource aso;
 
-	public AudioClip screamsound;
+	public AudioSource screamsound;
 
 	//current levels
 	public float fieldOfViewAngle = 20;
@@ -96,7 +96,7 @@ public class DemonBehavior : MonoBehaviour {
 					if (hit.collider.transform.root == player) {
 						// ... the player is in sight.
 						if (!tmp && (Time.time - lastScreamTime > screamDelay)) {
-							aso.PlayOneShot(screamsound, 2);
+							screamsound.Play();
 							lastScreamTime = Time.time;
 						}
 						playerInSight = true;						
