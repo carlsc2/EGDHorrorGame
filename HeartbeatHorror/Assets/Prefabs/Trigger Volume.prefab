@@ -123,8 +123,10 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   triggerRate: 1
-  playOnEnter: 1
-  eventTrigger: 1
+  playAfterDelay: 0
+  delay: 0
+  playOnEnter: 0
+  eventTrigger: 0
   playOnRate: 0
   playSound: 0
   playOnce: 0
