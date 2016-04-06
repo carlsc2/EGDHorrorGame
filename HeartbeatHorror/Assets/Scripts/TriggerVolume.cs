@@ -41,7 +41,7 @@ public class TriggerVolume : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (playOnce && !triggered)
+        if (!playOnce)
         {
             if (playOnEnter)
             {
@@ -69,9 +69,8 @@ public class TriggerVolume : MonoBehaviour {
                 }
             }
 
-            triggered = true;
         }
-        else
+        else if(playOnce  && !triggered)
         {
             if (playOnEnter)
             {
@@ -98,6 +97,7 @@ public class TriggerVolume : MonoBehaviour {
                     }
                 }
             }
+            triggered = true;
         }
     }
 

@@ -23,7 +23,7 @@ public class DoorTrigger : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         
-            anim.SetBool("Door Open",true);
+            anim.SetTrigger("Door Open");
         
         
         Debug.Log("I've hit something " + other.tag.ToString());
@@ -31,7 +31,7 @@ public class DoorTrigger : MonoBehaviour {
 
     void OnTriggerExit(Collider other) {
 
-        anim.SetBool("Door Open",false);
+        anim.SetTrigger("Door Open");
         Debug.Log("..and it's gone...");
     }
 }
