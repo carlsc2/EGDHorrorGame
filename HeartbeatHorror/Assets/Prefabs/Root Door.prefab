@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2312756}
   - 65: {fileID: 6583146}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,8 +43,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
-  m_LocalScale: {x: 0.1, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.44}
+  m_LocalScale: {x: 0.1, y: 2.18, z: 1.19}
   m_Children: []
   m_Father: {fileID: 447960}
   m_RootOrder: 0
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.548, y: 7.838, z: -9.914}
+  m_LocalPosition: {x: 0.037, y: 1.516, z: -6.231}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 423068}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad3346fd5737134a93554a3dee8359d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerRate: 0
+  triggerRate: 1
   anim: {fileID: 9563624}
 --- !u!135 &13594630
 SphereCollider:
