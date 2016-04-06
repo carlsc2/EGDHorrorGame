@@ -14,12 +14,15 @@ public class TriggerVolume : MonoBehaviour {
     [Range(1, 10)]
     public int triggerRate;
     
+    public bool playAfterDelay;
+    [Range(1,5)]
+    public float delay;
+
+    
     public bool playOnEnter;
     public bool eventTrigger;
     public bool playOnRate;
-
     public bool playSound;
-
     public bool playOnce;
     private bool triggered;
 
@@ -38,9 +41,20 @@ public class TriggerVolume : MonoBehaviour {
 	void Update () {
 	 
 	}
+  
 
+    
     void OnTriggerEnter(Collider other)
     {
+        float temp = delay;
+        if(other.gameObject.tag == "Player"){
+        if (playAfterDelay)
+        {
+            while (temp> 0)
+            {
+                temp -= Time.deltaTime;
+            }
+        }      
         if (!playOnce)
         {
             if (playOnEnter)
@@ -99,6 +113,7 @@ public class TriggerVolume : MonoBehaviour {
             }
             triggered = true;
         }
+    }
     }
 
 
