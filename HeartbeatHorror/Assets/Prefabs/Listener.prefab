@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   measurements_per_second: 10
   avg_window: 5
-  calibration_time: 15
+  calibration_time: 60
   avgPulse: 0
   outPulse: 0
   port: COM4

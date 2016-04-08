@@ -14,7 +14,7 @@ public class HBSoundPlayer : MonoBehaviour {
 			if (duration != -1 && duration != Mathf.Infinity) {
 				//max volume at 20% above base rate
 				//min volume at < 5% above base rate
-				float volumescale = (HBListener.Instance.outPulse - 0.05f * HBListener.Instance.base_rate) / (0.2f * HBListener.Instance.base_rate);
+				float volumescale = (HBListener.Instance.outPulse - HBListener.Instance.base_rate) / (0.17f * HBListener.Instance.base_rate);
 				aso.PlayOneShot(beat, volumescale);
 				yield return new WaitForSeconds(duration * 60);
 			}

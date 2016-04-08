@@ -11,7 +11,8 @@ public class AINavController :Singleton<AINavController>{
     }
 
     public enum PathLocation { 
-        MainFloor = 0 
+        MainFloor = 0, 
+        FrontLeft = 1
     }
 
 
