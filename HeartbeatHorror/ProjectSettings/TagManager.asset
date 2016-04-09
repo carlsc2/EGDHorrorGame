@@ -7,7 +7,10 @@ TagManager:
   - Monster
   - Listener
   - RatNavPoint
-  - test
+  - Ring
+  - Skull
+  - Goblet
+  - Dagger
   layers:
   - Default
   - TransparentFX
