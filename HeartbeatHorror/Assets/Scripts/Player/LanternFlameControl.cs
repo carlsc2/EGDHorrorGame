@@ -6,9 +6,12 @@ public class LanternFlameControl : MonoBehaviour {
 	private Transform monster;
 	public float nearDist = 5;
 	public float farDist = 20;
-	public Material candleMat;
+	public GameObject flameObj;
+	private Material candleMat;
 
-	void Start () {
+
+	void Awake () {
+		candleMat = flameObj.GetComponent<MeshRenderer>().material;
 		candleMat.SetFloat("_Color", 0);
 		monster = GameObject.FindGameObjectWithTag("Monster").transform;
 	}

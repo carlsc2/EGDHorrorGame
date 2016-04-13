@@ -201,17 +201,6 @@ public class DemonBehavior : MonoBehaviour {
 							}
 							//agent.SetDestination(nhit.position);
 						}
-
-						/*NavMeshPath path = new NavMeshPath();
-						if(!agent.CalculatePath(wanderpoint, path)){
-							break;
-						}
-						print(PathLength(path));
-						if (PathLength(path) <= searchDistance) {
-							agent.SetPath(path);
-							break;
-						}*/
-
 						
 						searchDistance += 0.1f;
 						yield return null;
