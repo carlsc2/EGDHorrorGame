@@ -3,11 +3,15 @@ using System.Collections;
 
 public class DemonBehavior : MonoBehaviour {
 
-	private NavMeshAgent agent;
-	private Transform player;
-	private UnityStandardAssets.Characters.FirstPerson.FirstPersonController pcontrol;
-	private AudioSource aso;
+	[HideInInspector]
+	public NavMeshAgent agent;
+	[HideInInspector]
+	public AudioSource aso;
+	[HideInInspector]
+	public Transform player;
 
+	private UnityStandardAssets.Characters.FirstPerson.FirstPersonController pcontrol;
+	
 	public AudioSource screamsound;
 
 	//current levels
@@ -16,8 +20,12 @@ public class DemonBehavior : MonoBehaviour {
 	public float wanderDistance = 30;
 	public float searchTime = 15; //how long to search before giving up
 
-	private float lastSightingTime = -1000;//time of last player sighting
-	private Vector3 lastSightingPosition;//position of last sighting
+	[HideInInspector]
+	public float lastSightingTime = -1000;//time of last player sighting
+	[HideInInspector]
+	public Vector3 lastSightingPosition;//position of last sighting
+
+	public SkinnedMeshRenderer eyemesh;
 
 
 	//base levels
@@ -31,9 +39,11 @@ public class DemonBehavior : MonoBehaviour {
 	public float screamDelay = 10f;//minimum time between screams
 	private float lastScreamTime = -1000;
 
-	public Material eyeMat;
+	private Material eyeMat;
 
 	public Transform sightpoint;
+
+	public Animator statemachine;
 
 	
 
@@ -75,7 +85,8 @@ public class DemonBehavior : MonoBehaviour {
 		pcontrol = player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
 
 		aso = GetComponent<AudioSource>();
-		StartCoroutine(do_update());
+		eyeMat = eyemesh.material;
+		//StartCoroutine(do_update());
 	}
 
 	bool check_line_of_sight() {
@@ -113,9 +124,8 @@ public class DemonBehavior : MonoBehaviour {
 	}
 
 	void adapt_alert_radius() {
-
 		//sneaky beaky adaptive fov
-		if (pcontrol.is_walking() || playerInSight) {
+		if (pcontrol.is_walking() || !playerInSight) {
 			fieldOfViewAngle = _fieldOfViewAngle;
 		}
 		else {
@@ -128,7 +138,7 @@ public class DemonBehavior : MonoBehaviour {
 	}
 
 
-	bool is_navigating() {
+	public bool is_navigating() {
 		// Check if we've reached the destination
 		if (!agent.pathPending) {
 			if (agent.remainingDistance <= agent.stoppingDistance) {
@@ -140,13 +150,13 @@ public class DemonBehavior : MonoBehaviour {
 		return true;
 	}
 
-	void RotateTowards(Transform target) {
+	public void RotateTowards(Transform target) {
 		Vector3 direction = (target.position - transform.position).normalized;
 		Quaternion lookRotation = Quaternion.LookRotation(direction);
 		transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * agent.angularSpeed);
 	}
 
-	float PathLength(NavMeshPath path) {
+	/*float PathLength(NavMeshPath path) {
 		if (path.corners.Length < 2)
 			return 0;
 
@@ -160,74 +170,20 @@ public class DemonBehavior : MonoBehaviour {
 			i++;
 		}
 		return lengthSoFar;
-	}
+	}*/
 
+	void Update() {
+		adapt_alert_radius();
+		check_line_of_sight();
+		is_searching = Time.time - lastSightingTime < searchTime;
 
-	// Update is called once per frame
-	IEnumerator do_update () {
-		while (true) {
-			adapt_alert_radius();
-			check_line_of_sight();
+		statemachine.SetBool("player_in_sight", playerInSight);
+		statemachine.SetBool("player_in_range", playerInRange);
+		statemachine.SetBool("is_searching", is_searching);
 
-			is_searching = Time.time - lastSightingTime < searchTime;
-
-			if (playerInSight) {//if player in sight, chase the player
-				aso.volume = Mathf.Lerp(aso.volume, 1, Time.deltaTime);
-				RotateTowards(player);
-				agent.SetDestination(player.position);
-			}
-
-			else if ((!playerInSight && is_searching) || playerInRange) { //if player is near but not seen, wander area for time
-				if (!is_navigating()) {
-					float searchDistance = 1 + agent.stoppingDistance;
-					while (true) {
-						Vector3 tpos = is_searching ? lastSightingPosition : transform.position;
-						Vector3 wanderpoint = (Vector3)(Random.insideUnitCircle * searchDistance) + tpos;
-
-						NavMeshHit nhit;
-						if(NavMesh.SamplePosition(wanderpoint, out nhit, searchDistance, 1)) {
-							NavMeshPath path = new NavMeshPath();
-							if (!agent.CalculatePath(nhit.position, path)) {
-								yield return null;
-								continue;
-							}
-							//only navigate to seeable areas
-							RaycastHit hit;
-							Vector3 direction = nhit.position - sightpoint.position;
-							if (!Physics.Raycast(sightpoint.position, direction.normalized, out hit, sightDistance)) {
-								//agent.SetDestination(hit.transform.position);
-								agent.SetPath(path);
-								break;
-							}
-							//agent.SetDestination(nhit.position);
-						}
-						
-						searchDistance += 0.1f;
-						yield return null;
-					}
-
-					
-				}
-				aso.volume = Mathf.Lerp(aso.volume, .25f, Time.deltaTime);
-			}
-
-			else if (!is_searching) {//wander larger area
-				if (!is_navigating()) {
-					Vector3 wanderpoint = (Random.insideUnitSphere * wanderDistance) + transform.position;
-					agent.SetDestination(wanderpoint);
-				}
-
-				if (aso.volume > 0) {
-					aso.volume = Mathf.Lerp(aso.volume, 0, Time.deltaTime);
-				}
-			}
-
-			//eye details
-			Color eyecolor = eyeMat.GetColor("_EmissionColor");
-			Color targetcolor = playerInSight ? Color.red : Color.white;
-			int brightval = playerInRange ? 1 : 0;
-			eyeMat.SetColor("_EmissionColor", Color.Lerp(eyecolor, targetcolor * brightval, Time.deltaTime));
-			yield return new WaitForEndOfFrame();
-		}
+		Color eyecolor = eyeMat.GetColor("_EmissionColor");
+		Color targetcolor = playerInSight ? Color.red : Color.white;
+		int brightval = playerInRange ? 1 : 0;
+		eyeMat.SetColor("_EmissionColor", Color.Lerp(eyecolor, targetcolor * brightval, Time.deltaTime));
 	}
 }
