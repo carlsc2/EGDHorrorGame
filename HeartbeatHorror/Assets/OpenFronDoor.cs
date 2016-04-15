@@ -4,13 +4,14 @@ using System.Collections;
 public class OpenFronDoor : MonoBehaviour {
    public GameObject LeftControl;
     public GameObject RightControl;
+    
 
 
 	// Use this for initialization
 	void Start () {
-        LeftControl = GameObject.Find("LeftControl");
+        LeftControl = gameObject.transform.FindChild("LeftControl").gameObject;
 
-        RightControl = GameObject.Find("RightControl");
+        RightControl = gameObject.transform.FindChild("RightControl").gameObject;
     }
 	
 	// Update is called once per frame
