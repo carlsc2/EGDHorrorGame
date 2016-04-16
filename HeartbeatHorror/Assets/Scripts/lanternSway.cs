@@ -13,5 +13,6 @@ public class lanternSway : MonoBehaviour {
 
 	void Update() {
 		rb.AddForce(-cc.velocity/2);
+        rb.angularDrag = 2.0f;
 	}
 }

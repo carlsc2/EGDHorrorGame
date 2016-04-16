@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+[RequireComponent( typeof(Animator))]
 public class OpenFronDoor : MonoBehaviour {
    public GameObject LeftControl;
     public GameObject RightControl;
+
+    public Animator anim;
     
 
 
@@ -12,6 +14,9 @@ public class OpenFronDoor : MonoBehaviour {
         LeftControl = gameObject.transform.FindChild("LeftControl").gameObject;
 
         RightControl = gameObject.transform.FindChild("RightControl").gameObject;
+
+        anim = GetComponent<Animator>();
+        
     }
 	
 	// Update is called once per frame
@@ -21,11 +26,17 @@ public class OpenFronDoor : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-
+        if (other.tag == "Player")
+        {
+            anim.SetBool("DoorOpen", true);
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
-
+        if (other.tag == "Player")
+        {
+            anim.SetBool("DoorOpen", false);
+        }
     }
 }

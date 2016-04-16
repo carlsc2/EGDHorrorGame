@@ -22,6 +22,9 @@ ModelImporter:
     4300000: MonsterInnerMouth
     4300002: MonsterBod
     4300004: MonsterEyes
+    6400000: MonsterBod
+    6400002: MonsterEyes
+    6400004: MonsterInnerMouth
   materials:
     importMaterials: 1
     materialName: 0
