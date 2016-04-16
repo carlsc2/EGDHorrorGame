@@ -14,7 +14,13 @@ public class LanternAngle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Vector3 tmp = startPos;
-		float h = startPos.y - Mathf.Clamp(cam.localRotation.x*2,-1.5f,.5f);
+		float h;
+		if (UnityEngine.VR.VRDevice.isPresent) {//reverse the direction in VR
+			h = startPos.y - Mathf.Clamp(-cam.localRotation.x * 2, -1.5f, .5f);
+		}
+		else {
+			h = startPos.y - Mathf.Clamp(cam.localRotation.x * 2, -1.5f, .5f);
+		}
 		tmp.y = h;
 		transform.localPosition = Vector3.Slerp(transform.localPosition,tmp,Time.deltaTime * 10);
 	}

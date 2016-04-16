@@ -133,7 +133,7 @@ public class DemonBehavior : MonoBehaviour {
 		}
 
 		//fear based sight distance increase
-		float fear_rate = HBListener.Instance.avgPulse / HBListener.Instance.base_rate;
+		float fear_rate = HBListener.Instance.avgPulse / (float)HBListener.Instance.base_rate;
 		sightDistance = _sightDistance * fear_rate;
 	}
 

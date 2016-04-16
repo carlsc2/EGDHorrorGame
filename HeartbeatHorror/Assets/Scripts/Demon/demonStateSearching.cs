@@ -21,7 +21,14 @@ public class demonStateSearching : StateMachineBehaviour {
 
 			/* TODO: weight wanderpoint towards player based on fear level */
 
+			float fear_weight = (HBListener.Instance.avgPulse / (float)HBListener.Instance.base_rate - 1) / 0.2f;
+
+			Debug.Log(fear_weight);
+
+			Vector3 playerpoint = db.player.position;
 			Vector3 wanderpoint = (Vector3)(Random.insideUnitCircle * searchDistance) + tpos;
+
+			wanderpoint = Vector3.Lerp(wanderpoint, playerpoint, fear_weight);
 
 			NavMeshHit nhit;
 			if (NavMesh.SamplePosition(wanderpoint, out nhit, searchDistance, 1)) {
