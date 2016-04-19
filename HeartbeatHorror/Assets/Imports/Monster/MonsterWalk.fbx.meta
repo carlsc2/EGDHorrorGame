@@ -1,0 +1,539 @@
+fileFormatVersion: 2
+guid: 4ec776072b8e43f4db99d960bcc56255
+timeCreated: 1461107641
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Monster_Controls:Monster_Rig_0002:Chest
+    100002: Monster_Controls:Monster_Rig_0002:Head
+    100004: Monster_Controls:Monster_Rig_0002:HeadTip
+    100006: Monster_Controls:Monster_Rig_0002:Hip
+    100008: Monster_Controls:Monster_Rig_0002:LeftBall
+    100010: Monster_Controls:Monster_Rig_0002:LeftBallTip
+    100012: Monster_Controls:Monster_Rig_0002:LeftEye
+    100014: Monster_Controls:Monster_Rig_0002:LeftEyeLower
+    100016: Monster_Controls:Monster_Rig_0002:LeftEyeUpper
+    100018: Monster_Controls:Monster_Rig_0002:LeftFleshmover
+    100020: Monster_Controls:Monster_Rig_0002:LeftFoot
+    100022: Monster_Controls:Monster_Rig_0002:LeftLeg
+    100024: Monster_Controls:Monster_Rig_0002:LeftLip1
+    100026: Monster_Controls:Monster_Rig_0002:LeftLip2
+    100028: Monster_Controls:Monster_Rig_0002:LeftLip3
+    100030: Monster_Controls:Monster_Rig_0002:LeftLip4
+    100032: Monster_Controls:Monster_Rig_0002:LeftLip5
+    100034: Monster_Controls:Monster_Rig_0002:LeftLip6
+    100036: Monster_Controls:Monster_Rig_0002:LeftLip7
+    100038: Monster_Controls:Monster_Rig_0002:LeftLip8
+    100040: Monster_Controls:Monster_Rig_0002:LeftLip9
+    100042: Monster_Controls:Monster_Rig_0002:LeftLipTop
+    100044: Monster_Controls:Monster_Rig_0002:LeftMouth1
+    100046: Monster_Controls:Monster_Rig_0002:LeftMouth2
+    100048: Monster_Controls:Monster_Rig_0002:LeftMouth3
+    100050: Monster_Controls:Monster_Rig_0002:LeftMouth4
+    100052: Monster_Controls:Monster_Rig_0002:LeftMouth5
+    100054: Monster_Controls:Monster_Rig_0002:LeftMouth6
+    100056: Monster_Controls:Monster_Rig_0002:LeftMouth7
+    100058: Monster_Controls:Monster_Rig_0002:LeftMouth8
+    100060: Monster_Controls:Monster_Rig_0002:LeftShoulder
+    100062: Monster_Controls:Monster_Rig_0002:LeftStub
+    100064: Monster_Controls:Monster_Rig_0002:LeftUpLeg
+    100066: Monster_Controls:Monster_Rig_0002:Neck1
+    100068: Monster_Controls:Monster_Rig_0002:Neck2
+    100070: Monster_Controls:Monster_Rig_0002:RightBall
+    100072: Monster_Controls:Monster_Rig_0002:RightBallTip
+    100074: Monster_Controls:Monster_Rig_0002:RightEye
+    100076: Monster_Controls:Monster_Rig_0002:RightEyeLower
+    100078: Monster_Controls:Monster_Rig_0002:RightEyeUpper
+    100080: Monster_Controls:Monster_Rig_0002:RightFleshmover
+    100082: Monster_Controls:Monster_Rig_0002:RightFoot
+    100084: Monster_Controls:Monster_Rig_0002:RightLeg
+    100086: Monster_Controls:Monster_Rig_0002:RightLip1
+    100088: Monster_Controls:Monster_Rig_0002:RightLip2
+    100090: Monster_Controls:Monster_Rig_0002:RightLip3
+    100092: Monster_Controls:Monster_Rig_0002:RightLip4
+    100094: Monster_Controls:Monster_Rig_0002:RightLip5
+    100096: Monster_Controls:Monster_Rig_0002:RightLip6
+    100098: Monster_Controls:Monster_Rig_0002:RightLip7
+    100100: Monster_Controls:Monster_Rig_0002:RightLip8
+    100102: Monster_Controls:Monster_Rig_0002:RightLip9
+    100104: Monster_Controls:Monster_Rig_0002:RightLipTop
+    100106: Monster_Controls:Monster_Rig_0002:RightMouth1
+    100108: Monster_Controls:Monster_Rig_0002:RightMouth2
+    100110: Monster_Controls:Monster_Rig_0002:RightMouth3
+    100112: Monster_Controls:Monster_Rig_0002:RightMouth4
+    100114: Monster_Controls:Monster_Rig_0002:RightMouth5
+    100116: Monster_Controls:Monster_Rig_0002:RightMouth6
+    100118: Monster_Controls:Monster_Rig_0002:RightMouth7
+    100120: Monster_Controls:Monster_Rig_0002:RightMouth8
+    100122: Monster_Controls:Monster_Rig_0002:RightShoulder
+    100124: Monster_Controls:Monster_Rig_0002:RightStub
+    100126: Monster_Controls:Monster_Rig_0002:RightUpLeg
+    100128: Monster_Controls:Monster_Rig_0002:Root
+    100130: Monster_Controls:Monster_Rig_0002:Spine1
+    100132: Monster_Controls:Monster_Rig_0002:Spine2
+    100134: //RootNode
+    400000: Monster_Controls:Monster_Rig_0002:Chest
+    400002: Monster_Controls:Monster_Rig_0002:Head
+    400004: Monster_Controls:Monster_Rig_0002:HeadTip
+    400006: Monster_Controls:Monster_Rig_0002:Hip
+    400008: Monster_Controls:Monster_Rig_0002:LeftBall
+    400010: Monster_Controls:Monster_Rig_0002:LeftBallTip
+    400012: Monster_Controls:Monster_Rig_0002:LeftEye
+    400014: Monster_Controls:Monster_Rig_0002:LeftEyeLower
+    400016: Monster_Controls:Monster_Rig_0002:LeftEyeUpper
+    400018: Monster_Controls:Monster_Rig_0002:LeftFleshmover
+    400020: Monster_Controls:Monster_Rig_0002:LeftFoot
+    400022: Monster_Controls:Monster_Rig_0002:LeftLeg
+    400024: Monster_Controls:Monster_Rig_0002:LeftLip1
+    400026: Monster_Controls:Monster_Rig_0002:LeftLip2
+    400028: Monster_Controls:Monster_Rig_0002:LeftLip3
+    400030: Monster_Controls:Monster_Rig_0002:LeftLip4
+    400032: Monster_Controls:Monster_Rig_0002:LeftLip5
+    400034: Monster_Controls:Monster_Rig_0002:LeftLip6
+    400036: Monster_Controls:Monster_Rig_0002:LeftLip7
+    400038: Monster_Controls:Monster_Rig_0002:LeftLip8
+    400040: Monster_Controls:Monster_Rig_0002:LeftLip9
+    400042: Monster_Controls:Monster_Rig_0002:LeftLipTop
+    400044: Monster_Controls:Monster_Rig_0002:LeftMouth1
+    400046: Monster_Controls:Monster_Rig_0002:LeftMouth2
+    400048: Monster_Controls:Monster_Rig_0002:LeftMouth3
+    400050: Monster_Controls:Monster_Rig_0002:LeftMouth4
+    400052: Monster_Controls:Monster_Rig_0002:LeftMouth5
+    400054: Monster_Controls:Monster_Rig_0002:LeftMouth6
+    400056: Monster_Controls:Monster_Rig_0002:LeftMouth7
+    400058: Monster_Controls:Monster_Rig_0002:LeftMouth8
+    400060: Monster_Controls:Monster_Rig_0002:LeftShoulder
+    400062: Monster_Controls:Monster_Rig_0002:LeftStub
+    400064: Monster_Controls:Monster_Rig_0002:LeftUpLeg
+    400066: Monster_Controls:Monster_Rig_0002:Neck1
+    400068: Monster_Controls:Monster_Rig_0002:Neck2
+    400070: Monster_Controls:Monster_Rig_0002:RightBall
+    400072: Monster_Controls:Monster_Rig_0002:RightBallTip
+    400074: Monster_Controls:Monster_Rig_0002:RightEye
+    400076: Monster_Controls:Monster_Rig_0002:RightEyeLower
+    400078: Monster_Controls:Monster_Rig_0002:RightEyeUpper
+    400080: Monster_Controls:Monster_Rig_0002:RightFleshmover
+    400082: Monster_Controls:Monster_Rig_0002:RightFoot
+    400084: Monster_Controls:Monster_Rig_0002:RightLeg
+    400086: Monster_Controls:Monster_Rig_0002:RightLip1
+    400088: Monster_Controls:Monster_Rig_0002:RightLip2
+    400090: Monster_Controls:Monster_Rig_0002:RightLip3
+    400092: Monster_Controls:Monster_Rig_0002:RightLip4
+    400094: Monster_Controls:Monster_Rig_0002:RightLip5
+    400096: Monster_Controls:Monster_Rig_0002:RightLip6
+    400098: Monster_Controls:Monster_Rig_0002:RightLip7
+    400100: Monster_Controls:Monster_Rig_0002:RightLip8
+    400102: Monster_Controls:Monster_Rig_0002:RightLip9
+    400104: Monster_Controls:Monster_Rig_0002:RightLipTop
+    400106: Monster_Controls:Monster_Rig_0002:RightMouth1
+    400108: Monster_Controls:Monster_Rig_0002:RightMouth2
+    400110: Monster_Controls:Monster_Rig_0002:RightMouth3
+    400112: Monster_Controls:Monster_Rig_0002:RightMouth4
+    400114: Monster_Controls:Monster_Rig_0002:RightMouth5
+    400116: Monster_Controls:Monster_Rig_0002:RightMouth6
+    400118: Monster_Controls:Monster_Rig_0002:RightMouth7
+    400120: Monster_Controls:Monster_Rig_0002:RightMouth8
+    400122: Monster_Controls:Monster_Rig_0002:RightShoulder
+    400124: Monster_Controls:Monster_Rig_0002:RightStub
+    400126: Monster_Controls:Monster_Rig_0002:RightUpLeg
+    400128: Monster_Controls:Monster_Rig_0002:Root
+    400130: Monster_Controls:Monster_Rig_0002:Spine1
+    400132: Monster_Controls:Monster_Rig_0002:Spine2
+    400134: //RootNode
+    7400000: WalkStalkTop
+    7400002: WalkForward2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: WalkStalkTop
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:LeftUpLeg
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:LeftUpLeg/Monster_Controls:Monster_Rig_0002:LeftLeg
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:LeftUpLeg/Monster_Controls:Monster_Rig_0002:LeftLeg/Monster_Controls:Monster_Rig_0002:LeftFoot
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:LeftUpLeg/Monster_Controls:Monster_Rig_0002:LeftLeg/Monster_Controls:Monster_Rig_0002:LeftFoot/Monster_Controls:Monster_Rig_0002:LeftBall
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:LeftUpLeg/Monster_Controls:Monster_Rig_0002:LeftLeg/Monster_Controls:Monster_Rig_0002:LeftFoot/Monster_Controls:Monster_Rig_0002:LeftBall/Monster_Controls:Monster_Rig_0002:LeftBallTip
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:RightUpLeg
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:RightUpLeg/Monster_Controls:Monster_Rig_0002:RightLeg
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:RightUpLeg/Monster_Controls:Monster_Rig_0002:RightLeg/Monster_Controls:Monster_Rig_0002:RightFoot
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:RightUpLeg/Monster_Controls:Monster_Rig_0002:RightLeg/Monster_Controls:Monster_Rig_0002:RightFoot/Monster_Controls:Monster_Rig_0002:RightBall
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:RightUpLeg/Monster_Controls:Monster_Rig_0002:RightLeg/Monster_Controls:Monster_Rig_0002:RightFoot/Monster_Controls:Monster_Rig_0002:RightBall/Monster_Controls:Monster_Rig_0002:RightBallTip
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftLip9
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth5
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth5/Monster_Controls:Monster_Rig_0002:LeftLip6
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth6
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth6/Monster_Controls:Monster_Rig_0002:LeftLip7
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth7
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth7/Monster_Controls:Monster_Rig_0002:LeftLip8
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftShoulder
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftShoulder/Monster_Controls:Monster_Rig_0002:LeftFleshmover
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftShoulder/Monster_Controls:Monster_Rig_0002:LeftStub
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:LeftMouth3
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:LeftMouth3/Monster_Controls:Monster_Rig_0002:LeftLip4
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:LeftMouth4
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:LeftMouth4/Monster_Controls:Monster_Rig_0002:LeftLip5
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:HeadTip
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftEye
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftEyeLower
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftEyeUpper
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftLipTop
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftMouth8
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftMouth8/Monster_Controls:Monster_Rig_0002:LeftLip1
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightEye
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightEyeLower
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightEyeUpper
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightLipTop
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightMouth8
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightMouth8/Monster_Controls:Monster_Rig_0002:RightLip1
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:LeftMouth1
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:LeftMouth1/Monster_Controls:Monster_Rig_0002:LeftLip2
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:LeftMouth2
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:LeftMouth2/Monster_Controls:Monster_Rig_0002:LeftLip3
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:RightMouth1
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:RightMouth1/Monster_Controls:Monster_Rig_0002:RightLip2
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:RightMouth2
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:RightMouth2/Monster_Controls:Monster_Rig_0002:RightLip3
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:RightMouth3
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:RightMouth3/Monster_Controls:Monster_Rig_0002:RightLip4
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:RightMouth4
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:RightMouth4/Monster_Controls:Monster_Rig_0002:RightLip5
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightLip9
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth5
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth5/Monster_Controls:Monster_Rig_0002:RightLip6
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth6
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth6/Monster_Controls:Monster_Rig_0002:RightLip7
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth7
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth7/Monster_Controls:Monster_Rig_0002:RightLip8
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightShoulder
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightShoulder/Monster_Controls:Monster_Rig_0002:RightFleshmover
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightShoulder/Monster_Controls:Monster_Rig_0002:RightStub
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: WalkForward2
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:LeftUpLeg
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:LeftUpLeg/Monster_Controls:Monster_Rig_0002:LeftLeg
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:LeftUpLeg/Monster_Controls:Monster_Rig_0002:LeftLeg/Monster_Controls:Monster_Rig_0002:LeftFoot
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:LeftUpLeg/Monster_Controls:Monster_Rig_0002:LeftLeg/Monster_Controls:Monster_Rig_0002:LeftFoot/Monster_Controls:Monster_Rig_0002:LeftBall
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:LeftUpLeg/Monster_Controls:Monster_Rig_0002:LeftLeg/Monster_Controls:Monster_Rig_0002:LeftFoot/Monster_Controls:Monster_Rig_0002:LeftBall/Monster_Controls:Monster_Rig_0002:LeftBallTip
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:RightUpLeg
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:RightUpLeg/Monster_Controls:Monster_Rig_0002:RightLeg
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:RightUpLeg/Monster_Controls:Monster_Rig_0002:RightLeg/Monster_Controls:Monster_Rig_0002:RightFoot
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:RightUpLeg/Monster_Controls:Monster_Rig_0002:RightLeg/Monster_Controls:Monster_Rig_0002:RightFoot/Monster_Controls:Monster_Rig_0002:RightBall
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:RightUpLeg/Monster_Controls:Monster_Rig_0002:RightLeg/Monster_Controls:Monster_Rig_0002:RightFoot/Monster_Controls:Monster_Rig_0002:RightBall/Monster_Controls:Monster_Rig_0002:RightBallTip
+        weight: 1
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftLip9
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth5
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth5/Monster_Controls:Monster_Rig_0002:LeftLip6
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth6
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth6/Monster_Controls:Monster_Rig_0002:LeftLip7
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth7
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftMouth7/Monster_Controls:Monster_Rig_0002:LeftLip8
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftShoulder
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftShoulder/Monster_Controls:Monster_Rig_0002:LeftFleshmover
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:LeftShoulder/Monster_Controls:Monster_Rig_0002:LeftStub
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:LeftMouth3
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:LeftMouth3/Monster_Controls:Monster_Rig_0002:LeftLip4
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:LeftMouth4
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:LeftMouth4/Monster_Controls:Monster_Rig_0002:LeftLip5
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:HeadTip
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftEye
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftEyeLower
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftEyeUpper
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftLipTop
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftMouth8
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:LeftMouth8/Monster_Controls:Monster_Rig_0002:LeftLip1
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightEye
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightEyeLower
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightEyeUpper
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightLipTop
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightMouth8
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:Head/Monster_Controls:Monster_Rig_0002:RightMouth8/Monster_Controls:Monster_Rig_0002:RightLip1
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:LeftMouth1
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:LeftMouth1/Monster_Controls:Monster_Rig_0002:LeftLip2
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:LeftMouth2
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:LeftMouth2/Monster_Controls:Monster_Rig_0002:LeftLip3
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:RightMouth1
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:RightMouth1/Monster_Controls:Monster_Rig_0002:RightLip2
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:RightMouth2
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:Neck2/Monster_Controls:Monster_Rig_0002:RightMouth2/Monster_Controls:Monster_Rig_0002:RightLip3
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:RightMouth3
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:RightMouth3/Monster_Controls:Monster_Rig_0002:RightLip4
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:RightMouth4
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:Neck1/Monster_Controls:Monster_Rig_0002:RightMouth4/Monster_Controls:Monster_Rig_0002:RightLip5
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightLip9
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth5
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth5/Monster_Controls:Monster_Rig_0002:RightLip6
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth6
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth6/Monster_Controls:Monster_Rig_0002:RightLip7
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth7
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightMouth7/Monster_Controls:Monster_Rig_0002:RightLip8
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightShoulder
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightShoulder/Monster_Controls:Monster_Rig_0002:RightFleshmover
+        weight: 0
+      - path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest/Monster_Controls:Monster_Rig_0002:RightShoulder/Monster_Controls:Monster_Rig_0002:RightStub
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Monster_Controls:Monster_Rig_0002:Root
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: f0716864ecbc1604ca3463e9eaad4642,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
