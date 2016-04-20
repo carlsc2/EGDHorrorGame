@@ -45,7 +45,12 @@ public class DemonBehavior : MonoBehaviour {
 
 	public Animator statemachine;
 
-	
+	void OnAnimatorMove() {
+		//need this to apply root motion for navmesh agent
+		agent.velocity = statemachine.deltaPosition / Time.deltaTime;
+	}
+
+
 
 	void OnDrawGizmosSelected() {
 		if (playerInSight) {
