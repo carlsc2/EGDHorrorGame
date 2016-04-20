@@ -14,6 +14,8 @@ public class DemonBehavior : MonoBehaviour {
 	
 	public AudioSource screamsound;
 
+	public static float mouthtarget = 0f;
+
 	//current levels
 	public float fieldOfViewAngle = 20;
 	public float sightDistance = 15;
@@ -44,11 +46,6 @@ public class DemonBehavior : MonoBehaviour {
 	public Transform sightpoint;
 
 	public Animator statemachine;
-
-	void OnAnimatorMove() {
-		//need this to apply root motion for navmesh agent
-		agent.velocity = statemachine.deltaPosition / Time.deltaTime;
-	}
 
 
 
@@ -185,6 +182,7 @@ public class DemonBehavior : MonoBehaviour {
 		statemachine.SetBool("player_in_sight", playerInSight);
 		statemachine.SetBool("player_in_range", playerInRange);
 		statemachine.SetBool("is_searching", is_searching);
+		statemachine.SetFloat("MouthBlend", Mathf.MoveTowards(statemachine.GetFloat("MouthBlend"), mouthtarget, Time.deltaTime * 10f));
 
 		Color eyecolor = eyeMat.GetColor("_EmissionColor");
 		Color targetcolor = playerInSight ? Color.red : Color.white;
