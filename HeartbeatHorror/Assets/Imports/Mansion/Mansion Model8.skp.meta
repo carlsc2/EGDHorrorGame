@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: 3dcd575839255094397b02b7e5bbaace
-timeCreated: 1461121445
-licenseType: Free
+guid: 020688631c8f23942beda956be67c0cf
+timeCreated: 1461121751
+licenseType: Pro
 SketchUpImporter:
   generateBackFace: 0
   mergeCoplanarFaces: 0
@@ -15,8 +15,8 @@ SketchUpImporter:
   fileUnit: 0
   sketchUpImportData:
     defaultCamera:
-      position: {x: -49.644394, y: 31.0383, z: -41.480747}
-      lookAt: {x: -33.809986, y: 21.116833, z: -24.340277}
+      position: {x: -74.4666, y: 46.557453, z: -62.221123}
+      lookAt: {x: -50.71498, y: 31.675251, z: -36.510418}
       up: {x: 0.2655078, y: 0.92027307, z: 0.2874075}
       fov: 35
       aspectRatio: 0
@@ -88,6 +88,20 @@ SketchUpImporter:
     4300008: Mesh Bucket
     4300010: Mesh Basement stair cover
     4300012: Mesh WellforMansion
+    6400000: Basement
+    6400002: Basement stair cover
+    6400004: Bucket
+    6400006: Bucket 1
+    6400008: //RootNode
+    6400010: Mansion Roof
+    6400012: Stairs - 3
+    6400014: Stairs - 3 1
+    6400016: Stairs - 3 2
+    6400018: Stairs - 3 3
+    6400020: Stairs - 3 4
+    6400022: Stairs - 3 5
+    6400024: Stairs - 3 6
+    6400026: WellforMansion
   materials:
     importMaterials: 1
     materialName: 2
@@ -112,12 +126,12 @@ SketchUpImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.0254
+    globalScale: 0.0381
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
