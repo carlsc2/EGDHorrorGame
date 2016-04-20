@@ -27,8 +27,11 @@ public class DoorTrigger : MonoBehaviour
         doorOpen = Resources.Load("Assets/Sounds/door_open.mp3") as AudioClip;
     
     }
-    void Update() { 
-    
+    void Update() {
+        if (colider.)
+        {
+            
+        }
     
     }
 	void OnTriggerEnter(Collider other)
