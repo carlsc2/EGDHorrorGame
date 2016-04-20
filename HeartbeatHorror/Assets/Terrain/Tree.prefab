@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -176,7 +177,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139402}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2115710}
@@ -342,7 +343,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 583
-  materialHash: ff76670f88af23e0670685eac164d0be-772014080
+  materialHash: 683859696fc6c98d433467f2bf92e58f-772014080
   root:
     _uniqueID: 1
     seed: 5
@@ -1707,7 +1708,7 @@ MonoBehaviour:
   mesh: {fileID: 4322646}
   optimizedSolidMaterial: {fileID: 2150806}
   optimizedCutoutMaterial: {fileID: 2115710}
-  isInPreviewMode: 1
+  isInPreviewMode: 0
 --- !u!193 &19354804
 Tree:
   m_ObjectHideFlags: 1
