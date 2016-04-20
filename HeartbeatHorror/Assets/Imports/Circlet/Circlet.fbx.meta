@@ -1,29 +1,15 @@
 fileFormatVersion: 2
-guid: 73494866661990e4c9eb83139aefbb29
-timeCreated: 1460166952
-licenseType: Pro
+guid: bfe8c136c1bd5934090b91f30372651c
+timeCreated: 1461118199
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Banister Leg
-    100002: Banister Rail
-    100004: Banister Rail End
-    100006: //RootNode
-    400000: Banister Leg
-    400002: Banister Rail
-    400004: Banister Rail End
-    400006: //RootNode
-    2300000: Banister Leg
-    2300002: Banister Rail
-    2300004: Banister Rail End
-    2300006: //RootNode
-    3300000: Banister Leg
-    3300002: Banister Rail
-    3300004: Banister Rail End
-    3300006: //RootNode
-    4300000: Banister Rail
-    4300002: Banister Leg
-    4300004: Banister Rail End
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
   materials:
     importMaterials: 1
     materialName: 0

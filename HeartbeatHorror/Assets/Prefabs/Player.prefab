@@ -312,10 +312,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149068}
-  m_LocalRotation: {x: 0, y: 0.78882736, z: 0, w: 0.61461484}
-  m_LocalPosition: {x: 0, y: 1, z: 9.3}
+  m_LocalRotation: {x: 0, y: -0.99897295, z: 0, w: 0.045310665}
+  m_LocalPosition: {x: 0, y: 1.08, z: 300}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 185.194, z: 0}
   m_Children:
   - {fileID: 448708}
   - {fileID: 448008}
@@ -795,7 +795,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000011920929, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.0000011324883, y: -0.00000011920929, z: -0.000010967255}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1108,18 +1108,18 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128096}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76b5ec6153a1d55438228df10fe66844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceFog: 1
+  distanceFog: 0
   excludeFarPixels: 0
   useRadialDistance: 1
-  heightFog: 0
-  height: 1
-  heightDensity: 0.001
-  startDistance: 250
+  heightFog: 1
+  height: 80
+  heightDensity: 0.01
+  startDistance: 40
   fogShader: {fileID: 4800000, guid: 70d8568987ac0499f952b54c7c13e265, type: 3}
 --- !u!114 &11481990
 MonoBehaviour:

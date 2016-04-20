@@ -16,9 +16,11 @@ ModelImporter:
     2300000: Banister Leg
     2300002: Banister Rail
     2300004: Banister Rail End
+    2300006: //RootNode
     3300000: Banister Leg
     3300002: Banister Rail
     3300004: Banister Rail End
+    3300006: //RootNode
     4300000: Banister Rail
     4300002: Banister Leg
     4300004: Banister Rail End
