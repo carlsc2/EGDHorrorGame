@@ -5,9 +5,21 @@ public class demonStateWandering : StateMachineBehaviour {
 
 	private DemonBehavior db;
 
+	static float wandertimeout = -1;
+
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		//called on the first frame of the state being played
 		db = animator.transform.root.GetComponent<DemonBehavior>();
+
+		if (wandertimeout == -1) {
+			wandertimeout = Time.time + Random.Range(5, 10);
+		}
+		else {
+			if (Time.time > wandertimeout) {
+				wandertimeout = -1;
+				animator.SetBool("is_active", false);
+			}
+		}
 
 	}
 

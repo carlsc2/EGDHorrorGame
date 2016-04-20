@@ -8,6 +8,9 @@ public class demonStateChasing : StateMachineBehaviour {
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		//called on the first frame of the state being played
 		db = animator.transform.root.GetComponent<DemonBehavior>();
+		DemonBehavior.mouthtarget = 1f;
+		animator.SetFloat("Movement", 1f);
+		animator.speed = 2;
 
 	}
 
@@ -24,6 +27,9 @@ public class demonStateChasing : StateMachineBehaviour {
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
 		//called on the last frame of a transition to another state.
+		DemonBehavior.mouthtarget = 0f;
+		animator.SetFloat("Movement", .25f);
+		animator.speed = 1;
 
 	}
 

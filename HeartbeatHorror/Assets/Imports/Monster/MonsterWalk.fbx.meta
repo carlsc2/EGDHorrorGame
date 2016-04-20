@@ -351,7 +351,39 @@ ModelImporter:
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: WalkSpeed
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0.0015825691
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 0.25017372
+            value: -0.0003182888
+            inSlope: -0.0020861626
+            outSlope: -0.0020861626
+            tangentMode: 0
+          - time: 0.5000168
+            value: 1.0008531
+            inSlope: -0.0029802322
+            outSlope: -0.0029802322
+            tangentMode: 0
+          - time: 0.7501377
+            value: 0.0010572672
+            inSlope: -0.0020861626
+            outSlope: -0.0020861626
+            tangentMode: 0
+          - time: 1.0001783
+            value: 0.99998015
+            inSlope: 0.00000009432455
+            outSlope: 0.00000009432455
+            tangentMode: 0
+          preInfinity: 2
+          postInfinity: 2
+          rotationOrder: 0
       events: []
       transformMask:
       - path: 
