@@ -25,6 +25,8 @@ public class HBListener : Singleton<HBListener> {
 	private float last_calibration_time = -1000;
 	public bool calibrated = false;
 
+	public bool test_mode = false;
+
 	void calc_avg() {
 		int sum = 0;
 		for(int i=0; i<windowsize; i++) {
@@ -41,6 +43,11 @@ public class HBListener : Singleton<HBListener> {
 		StartCoroutine(listener.getLiveData());
 		StartCoroutine(receiveData());
 		StartCoroutine(calibration());
+
+		if (test_mode) {
+			avgPulse = 80;
+			base_rate = 70;
+		}
 	}
 
 	IEnumerator receiveData() {

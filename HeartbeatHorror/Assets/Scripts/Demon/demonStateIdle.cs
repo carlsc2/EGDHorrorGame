@@ -18,7 +18,7 @@ public class demonStateIdle : StateMachineBehaviour {
 		else {
 			if (Time.time > idletimeout) {
 				idletimeout = -1;
-				animator.SetFloat("Movement", .5f);
+				animator.SetFloat("Movement", 1f);
 				animator.SetBool("is_active", true);
 			}
 		}

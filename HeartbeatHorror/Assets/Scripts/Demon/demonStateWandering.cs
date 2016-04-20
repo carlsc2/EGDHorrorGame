@@ -12,11 +12,12 @@ public class demonStateWandering : StateMachineBehaviour {
 		db = animator.transform.root.GetComponent<DemonBehavior>();
 
 		if (wandertimeout == -1) {
-			wandertimeout = Time.time + Random.Range(5, 10);
+			wandertimeout = Time.time + Random.Range(15, 45);
 		}
 		else {
 			if (Time.time > wandertimeout) {
 				wandertimeout = -1;
+				animator.SetFloat("Movement", 0);
 				animator.SetBool("is_active", false);
 			}
 		}
