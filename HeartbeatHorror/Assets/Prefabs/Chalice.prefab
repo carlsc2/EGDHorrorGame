@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 441836}
   - 33: {fileID: 3390878}
   - 23: {fileID: 2371786}
-  - 135: {fileID: 13535338}
+  - 135: {fileID: 13554430}
   m_Layer: 0
   m_Name: Chalice
   m_TagString: Goblet
@@ -24,9 +24,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124562}
-  m_LocalRotation: {x: 0.7071066, y: 0, z: 0, w: -0.70710695}
-  m_LocalPosition: {x: -5.897278, y: 0.5, z: 9}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -25.13, y: 1.85, z: 9.82}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalEulerAnglesHint: {x: -89.980194, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,18 +64,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124562}
   m_Mesh: {fileID: 4300000, guid: 180aec446a5cc3745b4f86283e69f77c, type: 3}
---- !u!135 &13535338
+--- !u!135 &13554430
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124562}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.03
-  m_Center: {x: 0, y: -0.00009243887, z: -0.0070180977}
+  m_Radius: 0.01
+  m_Center: {x: 0, y: -0.000023109718, z: -0.0017545262}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
