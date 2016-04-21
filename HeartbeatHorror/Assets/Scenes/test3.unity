@@ -754,6 +754,7 @@ GameObject:
   - 4: {fileID: 910967624}
   - 114: {fileID: 910967626}
   - 82: {fileID: 910967625}
+  - 114: {fileID: 910967627}
   m_Layer: 0
   m_Name: detunetest
   m_TagString: Untagged
@@ -783,7 +784,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c584d4fa391eaf244b69a85e049f0bfb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 468954b188c62f24f9d3158ac4f7ce81, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -864,6 +865,17 @@ MonoBehaviour:
   detuneRange: 1
   detuneSpeed: 0.5
   detuneIntensity: 0
+--- !u!114 &910967627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 910967623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed16f2b52763aa4494f3993bac08ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1042593786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,7 +1099,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11494308, guid: 812a5594229765a448fff7de725cdaa1, type: 2}
       propertyPath: test_mode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 812a5594229765a448fff7de725cdaa1, type: 2}
@@ -1282,6 +1294,18 @@ Prefab:
     - target: {fileID: 417268, guid: e14d4e86d36e4054597a876500738b4a, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 19589796, guid: e14d4e86d36e4054597a876500738b4a, type: 2}
+      propertyPath: m_Acceleration
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 19589796, guid: e14d4e86d36e4054597a876500738b4a, type: 2}
+      propertyPath: m_StoppingDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19589796, guid: e14d4e86d36e4054597a876500738b4a, type: 2}
+      propertyPath: m_AngularSpeed
+      value: 360
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e14d4e86d36e4054597a876500738b4a, type: 2}

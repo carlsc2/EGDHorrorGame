@@ -3,39 +3,32 @@ using System.Collections;
 
 public class demonStateIdle : StateMachineBehaviour {
 
+	private DemonBehavior db;
+
 	//blend values for idle states
 	static float[] statevals = new float[] { 0, 0.25f, 0.5f, 0.75f, 1f };
 
-	static float idletimeout = -1;
+	public static float idletimeout = -1;
 
-	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		//called on the first frame of the state being played
-		animator.SetFloat("idleAction", statevals[Random.Range(0, statevals.Length)]);
+	override public void OnStateMachineEnter(Animator animator, int stateMachinePathHash) {
+		db = animator.transform.root.GetComponent<DemonBehavior>();
+	}
 
-		if(idletimeout == -1) {
-			idletimeout = Time.time + Random.Range(5, 10);
-		}
-		else {
-			if (Time.time > idletimeout) {
-				idletimeout = -1;
-				animator.SetFloat("Movement", 1f);
-				animator.SetBool("is_active", true);
-			}
-		}
-
-
+	override public void OnStateMachineExit(Animator animator, int stateMachinePathHash) {
+		idletimeout = -1;
+		animator.SetLayerWeight(3, 1);
 	}
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
 		//called after MonoBehaviour Updates on every frame whilst the animator is playing the state this behaviour belongs to
+		if(db == null) {
+			db = animator.transform.root.GetComponent<DemonBehavior>();
+		}
+
+		if (db.playerInRange) {
+			animator.SetBool("is_active", true);
+		}
 
 	}
-
-	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-
-		//called on the last frame of a transition to another state.
-
-	}
-
 }

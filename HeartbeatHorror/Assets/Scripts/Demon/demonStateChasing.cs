@@ -11,7 +11,8 @@ public class demonStateChasing : StateMachineBehaviour {
 		DemonBehavior.mouthtarget = 1f;
 
 		float fearscale = (HBListener.Instance.avgPulse - HBListener.Instance.base_rate) / (0.17f * HBListener.Instance.base_rate);
-		animator.speed = Mathf.Lerp(2,5,fearscale);
+		//animator.speed = Mathf.Lerp(2,5,fearscale);
+		DemonBehavior.target_speed = Mathf.Lerp(6, 12, fearscale);
 
 	}
 
@@ -24,7 +25,8 @@ public class demonStateChasing : StateMachineBehaviour {
 		db.agent.SetDestination(db.player.position);
 
 		float fearscale = (HBListener.Instance.avgPulse - HBListener.Instance.base_rate) / (0.17f * HBListener.Instance.base_rate);
-		animator.speed = Mathf.Lerp(2, 5, fearscale);
+		//animator.speed = Mathf.Lerp(2, 5, fearscale);
+		DemonBehavior.target_speed = Mathf.Lerp(6, 12, fearscale);
 
 	}
 
@@ -32,7 +34,8 @@ public class demonStateChasing : StateMachineBehaviour {
 
 		//called on the last frame of a transition to another state.
 		DemonBehavior.mouthtarget = 0f;
-		animator.speed = 1;
+		//animator.speed = 1;
+		DemonBehavior.target_speed = 1;
 
 	}
 

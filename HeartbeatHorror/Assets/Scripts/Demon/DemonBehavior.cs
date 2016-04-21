@@ -14,7 +14,9 @@ public class DemonBehavior : MonoBehaviour {
 	
 	public AudioSource screamsound;
 
+	//animator values
 	public static float mouthtarget = 0f;
+	public static float target_speed = 1f;
 
 	//current levels
 	public float fieldOfViewAngle = 20;
@@ -47,8 +49,6 @@ public class DemonBehavior : MonoBehaviour {
 
 	public Animator statemachine;
 
-
-
 	void OnDrawGizmosSelected() {
 		if (playerInSight) {
 			Gizmos.color = new Color(1, 1, 0, .25f);
@@ -78,7 +78,7 @@ public class DemonBehavior : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		_sightDistance = sightDistance;
 		_fieldOfViewAngle = fieldOfViewAngle;
 
@@ -183,6 +183,8 @@ public class DemonBehavior : MonoBehaviour {
 		statemachine.SetBool("player_in_range", playerInRange);
 		statemachine.SetBool("is_searching", is_searching);
 		statemachine.SetFloat("MouthBlend", Mathf.MoveTowards(statemachine.GetFloat("MouthBlend"), mouthtarget, Time.deltaTime * 10f));
+		statemachine.speed = Mathf.MoveTowards(statemachine.speed, target_speed, Time.deltaTime * 2);
+		statemachine.SetFloat("Movement", is_navigating() ? 1 : 0);
 
 		Color eyecolor = eyeMat.GetColor("_EmissionColor");
 		Color targetcolor = playerInSight ? Color.red : Color.white;

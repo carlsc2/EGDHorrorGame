@@ -17,7 +17,7 @@ public class demonStateWandering : StateMachineBehaviour {
 		else {
 			if (Time.time > wandertimeout) {
 				wandertimeout = -1;
-				animator.SetFloat("Movement", 0);
+				//animator.SetFloat("Movement", 0);
 				animator.SetBool("is_active", false);
 			}
 		}
@@ -40,7 +40,7 @@ public class demonStateWandering : StateMachineBehaviour {
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
-		//called on the last frame of a transition to another state.
+		wandertimeout = -1;
 
 	}
 

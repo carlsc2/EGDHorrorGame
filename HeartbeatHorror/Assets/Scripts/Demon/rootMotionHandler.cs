@@ -19,7 +19,7 @@ public class rootMotionHandler : MonoBehaviour {
 	void OnAnimatorMove() {
 		//update root body position
 		Vector3 newPosition = troot.position;
-		newPosition += anim.GetFloat("WalkSpeed") * anim.deltaPosition; //* Time.deltaTime;
+		newPosition += anim.GetFloat("WalkSpeed") * anim.deltaPosition * Time.deltaTime;
 		troot.position = newPosition;
 
 		//need this to apply root motion for navmesh agent

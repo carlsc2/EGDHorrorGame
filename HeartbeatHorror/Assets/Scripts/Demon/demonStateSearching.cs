@@ -49,13 +49,15 @@ public class demonStateSearching : StateMachineBehaviour {
 		db.aso.volume = Mathf.Lerp(db.aso.volume, .25f, Time.deltaTime);
 
 		//increase search speed based on player fear
-		animator.speed = HBListener.Instance.avgPulse / HBListener.Instance.base_rate;
+		//animator.speed = HBListener.Instance.avgPulse / HBListener.Instance.base_rate;
+		DemonBehavior.target_speed = HBListener.Instance.avgPulse / HBListener.Instance.base_rate;
 	}
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
 		//called on the last frame of a transition to another state.
-		animator.speed = 1;
+		//animator.speed = 1;
+		DemonBehavior.target_speed = 1;
 
 	}
 }
