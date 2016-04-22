@@ -28,7 +28,7 @@ public class DoorTrigger : MonoBehaviour
     
     }
     void Update() {
-        if (colider.)
+        if (colider)
         {
             
         }
