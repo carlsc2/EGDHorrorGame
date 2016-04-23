@@ -16,6 +16,10 @@ public class lightFlicker : MonoBehaviour {
 
 	private float target_intensity;
 
+
+
+    public void getRender() { 
+    }
 	void Start() {
 		candleMat = flameObj.GetComponent<MeshRenderer>().material;
 		light = GetComponent<Light>();

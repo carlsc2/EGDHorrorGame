@@ -17,8 +17,14 @@ public class CollectLantern : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
            GameObject  temp =  other.gameObject.transform.FindChild("lanternhinge").gameObject;
+           lightFlicker lf = temp.GetComponentInChildren<lightFlicker>();
+          
+
+           
+
            temp.SetActive(true);
-           Destroy(gameObject);
+           lf.getRender();
+            Destroy(gameObject);
 
         }
 
