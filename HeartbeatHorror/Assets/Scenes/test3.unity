@@ -42,7 +42,7 @@ LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_GIWorkflowMode: 1
-  m_LightmapsMode: 1
+  m_LightmapsMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -1083,6 +1083,46 @@ Prefab:
     - target: {fileID: 5437250, guid: 8650830949969d645a9061b2489b70d5, type: 2}
       propertyPath: m_Constraints
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986124, guid: 8650830949969d645a9061b2489b70d5, type: 2}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.055581372
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986124, guid: 8650830949969d645a9061b2489b70d5, type: 2}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.012616098
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986124, guid: 8650830949969d645a9061b2489b70d5, type: 2}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.29373276
+      objectReference: {fileID: 0}
+    - target: {fileID: 158908, guid: 8650830949969d645a9061b2489b70d5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359742, guid: 8650830949969d645a9061b2489b70d5, type: 2}
+      propertyPath: m_UseLightProbes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359742, guid: 8650830949969d645a9061b2489b70d5, type: 2}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359742, guid: 8650830949969d645a9061b2489b70d5, type: 2}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359742, guid: 8650830949969d645a9061b2489b70d5, type: 2}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479148, guid: 8650830949969d645a9061b2489b70d5, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -73.5289
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359742, guid: 8650830949969d645a9061b2489b70d5, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8650830949969d645a9061b2489b70d5, type: 2}

@@ -12,21 +12,20 @@ public class CollectLantern : MonoBehaviour {
 	void Update () {
 	
 	}
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-           GameObject  temp =  other.gameObject.transform.FindChild("lanternhinge").gameObject;
-           lightFlicker lf = temp.GetComponentInChildren<lightFlicker>();
-          
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.tag == "Player")
+		{
+		   GameObject  temp =  other.gameObject.transform.FindChild("lanternhinge").gameObject;
+		   lightFlicker lf = temp.GetComponentInChildren<lightFlicker>();
+		  
 
-           
+		   
 
-           temp.SetActive(true);
-           lf.getRender();
-            Destroy(gameObject);
+		   temp.SetActive(true);
+		   Destroy(gameObject);
 
-        }
+		}
 
-    }
+	}
 }
