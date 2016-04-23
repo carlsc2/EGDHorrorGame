@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &191266
 GameObject:
@@ -33,7 +33,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &191976
 GameObject:
@@ -50,7 +50,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &401356
 Transform:
@@ -61,7 +61,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.102, z: -0.015}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 478080}
   m_RootOrder: 1
@@ -74,7 +73,6 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: -0.067, z: 0.078}
   m_LocalScale: {x: 0.4999999, y: 0.49999994, z: 0.49999988}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 478080}
   m_RootOrder: 0
@@ -85,9 +83,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191266}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5000001, w: 0.49999994}
-  m_LocalPosition: {x: -24.914, y: 3.69, z: -1.96}
+  m_LocalPosition: {x: -23.714, y: 3.69, z: -1.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
   m_Children:
   - {fileID: 418566}
   - {fileID: 401356}
@@ -170,7 +167,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 0.603, a: 1}
   m_Intensity: 4
-  m_Range: 8
+  m_Range: 20
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -217,8 +214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c56de2f050b0304daf32207c081cd0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min_intensity: 4
-  max_intensity: 5.5
   flickerSpeed: 0.035
   flameObj: {fileID: 166150}
 --- !u!1001 &100100000
