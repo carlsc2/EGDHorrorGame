@@ -14,16 +14,14 @@ public class demonStateSearching : StateMachineBehaviour {
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
-		//called after MonoBehaviour Updates on every frame whilst the animator is playing the state this behaviour belongs to
+		if (eatPlayer.killed) {
+			return;
+		}
 
 		if (!db.is_navigating()) {
 			Vector3 tpos = db.is_searching ? db.lastSightingPosition : db.transform.position;
 
-			/* TODO: weight wanderpoint towards player based on fear level */
-
 			float fear_weight = (HBListener.Instance.avgPulse / (float)HBListener.Instance.base_rate - 1) / 0.2f;
-
-			Debug.Log(fear_weight);
 
 			Vector3 playerpoint = db.player.position;
 			Vector3 wanderpoint = (Vector3)(Random.insideUnitCircle * searchDistance) + tpos;

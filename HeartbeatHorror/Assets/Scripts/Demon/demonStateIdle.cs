@@ -5,9 +5,6 @@ public class demonStateIdle : StateMachineBehaviour {
 
 	private DemonBehavior db;
 
-	//blend values for idle states
-	static float[] statevals = new float[] { 0, 0.25f, 0.5f, 0.75f, 1f };
-
 	public static float idletimeout = -1;
 
 	override public void OnStateMachineEnter(Animator animator, int stateMachinePathHash) {

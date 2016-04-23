@@ -26,7 +26,9 @@ public class demonStateWandering : StateMachineBehaviour {
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
-		//called after MonoBehaviour Updates on every frame whilst the animator is playing the state this behaviour belongs to
+		if (eatPlayer.killed) {
+			return;
+		}
 
 		if (!db.is_navigating()) {
 			Vector3 wanderpoint = (Random.insideUnitSphere * db.wanderDistance) + db.transform.position;
