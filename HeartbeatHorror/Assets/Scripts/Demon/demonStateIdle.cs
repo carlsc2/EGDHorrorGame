@@ -13,7 +13,6 @@ public class demonStateIdle : StateMachineBehaviour {
 
 	override public void OnStateMachineExit(Animator animator, int stateMachinePathHash) {
 		idletimeout = -1;
-		animator.SetLayerWeight(3, 1);
 	}
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

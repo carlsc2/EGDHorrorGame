@@ -10,6 +10,7 @@ public class demonStateWandering : StateMachineBehaviour {
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		//called on the first frame of the state being played
 		db = animator.transform.root.GetComponent<DemonBehavior>();
+		animator.SetLayerWeight(3, 1);
 
 		if (wandertimeout == -1) {
 			wandertimeout = Time.time + Random.Range(15, 45);

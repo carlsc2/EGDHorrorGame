@@ -11,6 +11,7 @@ TagManager:
   - Skull
   - Goblet
   - Dagger
+  - blackscreen
   layers:
   - Default
   - TransparentFX

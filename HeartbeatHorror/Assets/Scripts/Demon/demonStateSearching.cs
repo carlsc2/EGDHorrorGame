@@ -10,6 +10,7 @@ public class demonStateSearching : StateMachineBehaviour {
 		//called on the first frame of the state being played
 		db = animator.transform.root.GetComponent<DemonBehavior>();
 		searchDistance = 1 + db.agent.stoppingDistance;
+		animator.SetLayerWeight(3, 1);
 	}
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
