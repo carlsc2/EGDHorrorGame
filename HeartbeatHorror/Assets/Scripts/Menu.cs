@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour {
 
     private Canvas can;
-    private bool active;
+    private CharacterController player;
+   
+    public bool active = true;
 	// Use this for initialization
 	void Start () {
         can = GetComponent<Canvas>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
 	}
 	
 	// Update is called once per frame
@@ -20,12 +23,23 @@ public class Menu : MonoBehaviour {
         }
         if (active)
         {
+            Time.timeScale = 0;
             can.enabled = true;
         }
         else
         {
+            Time.timeScale = 1;
             can.enabled = false;
         }
 
 	}
-}
+    public void QuitGame(){
+        if (!Application.isEditor)
+        {
+            Application.Quit();
+        }
+        else {
+            print("Quit!");
+        }
+    }
+  }
