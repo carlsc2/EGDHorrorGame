@@ -16,9 +16,12 @@ public class demonStateIdleReset : StateMachineBehaviour {
 			demonStateIdle.idletimeout = Time.time + Random.Range(5, 10);
 		}
 		else {
-			if (Time.time > demonStateIdle.idletimeout) {
+			float fearscale = HBListener.Instance.avgPulse / (float)HBListener.Instance.base_rate;
+
+			if (fearscale < 1.05f) {//if under 5% scared, phase out
+				animator.SetTrigger("phaseout");
+			}else if (Time.time > demonStateIdle.idletimeout) {
 				demonStateIdle.idletimeout = -1;
-				//animator.SetFloat("Movement", 1f);
 				animator.SetBool("is_active", true);
 			}
 		}

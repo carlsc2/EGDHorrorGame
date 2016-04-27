@@ -49,21 +49,24 @@ public class DemonBehavior : MonoBehaviour {
 
 	public Animator statemachine;
 
+	public ParticleSystem spawnparticles;
+
 	void OnDrawGizmosSelected() {
 		if (playerInSight) {
-			Gizmos.color = new Color(1, 1, 0, .25f);
+			Gizmos.color = new Color(1, 1, 0, .5f);
 		}
 		else {
-			Gizmos.color = new Color(1, 0, 0, .25f);
+			Gizmos.color = new Color(1, 0, 0, .5f);
 		}
 		
 		Gizmos.DrawSphere(transform.position, sightDistance);
+		Gizmos.color = new Color(0, 1, 0, .25f);
 		Gizmos.DrawSphere(transform.position, wanderDistance);
 
 		
 
 
-		float rayRange = 10.0f;
+		float rayRange = sightDistance;
 		float halfFOV = fieldOfViewAngle / 2.0f;
 		Quaternion leftRayRotation = Quaternion.AngleAxis(-halfFOV, Vector3.up);
 		Quaternion rightRayRotation = Quaternion.AngleAxis(halfFOV, Vector3.up);
@@ -135,8 +138,9 @@ public class DemonBehavior : MonoBehaviour {
 		}
 
 		//fear based sight distance increase
-		float fear_rate = HBListener.Instance.avgPulse / (float)HBListener.Instance.base_rate;
-		sightDistance = _sightDistance * fear_rate;
+		//double the distance at 20% fear
+		float fear_rate = (HBListener.Instance.avgPulse / (float)HBListener.Instance.base_rate - 1) / 0.2f;
+		sightDistance = _sightDistance + _sightDistance * fear_rate;
 	}
 
 
@@ -193,5 +197,35 @@ public class DemonBehavior : MonoBehaviour {
 		Color targetcolor = playerInSight ? Color.red : Color.white;
 		int brightval = playerInRange ? 1 : 0;
 		eyeMat.SetColor("_EmissionColor", Color.Lerp(eyecolor, targetcolor * brightval, Time.deltaTime));
+	}
+
+	public void phase_into_world() {
+		StartCoroutine(_phase_into_world());
+	}
+
+	private IEnumerator _phase_into_world() {
+		spawnparticles.Play();
+		yield return new WaitForSeconds(1);
+		SkinnedMeshRenderer[] skins = statemachine.GetComponentsInChildren<SkinnedMeshRenderer>();
+		foreach(SkinnedMeshRenderer skm in skins) {
+			skm.enabled = true;
+		}
+		statemachine.GetComponent<CapsuleCollider>().enabled = true;
+	}
+
+	public void phase_out_of_world() {
+		StartCoroutine(_phase_out_of_world());
+	}
+
+	private IEnumerator _phase_out_of_world() {
+		agent.Stop();
+		agent.ResetPath();
+		statemachine.GetComponent<CapsuleCollider>().enabled = false;
+		spawnparticles.Play();
+		yield return new WaitForSeconds(1);
+		SkinnedMeshRenderer[] skins = statemachine.GetComponentsInChildren<SkinnedMeshRenderer>();
+		foreach (SkinnedMeshRenderer skm in skins) {
+			skm.enabled = false;
+		}
 	}
 }

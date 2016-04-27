@@ -8,8 +8,10 @@
 		_Emission("Emission", Range(0,1)) = 0.5
 		_threshold("threshold", Range(0,1)) = 0.5
 	}
+
 	SubShader {
 		Tags{ "Queue" = "Transparent" "RenderType" = "Transparent" }
+		
 		LOD 200
 		
 		CGPROGRAM

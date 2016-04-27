@@ -25,7 +25,9 @@ public class HBListener : Singleton<HBListener> {
 	private float last_calibration_time = -1000;
 	public bool calibrated = false;
 
-	public bool test_mode = false;
+	public enum _test_mode {none, afraid, calm};
+
+	public _test_mode test_mode;
 
 	void calc_avg() {
 		int sum = 0;
@@ -44,16 +46,27 @@ public class HBListener : Singleton<HBListener> {
 		StartCoroutine(receiveData());
 		StartCoroutine(calibration());
 
-		if (test_mode) {
-			avgPulse = 80;
-			base_rate = 70;
-		}
+		
 	}
 
 	IEnumerator receiveData() {
 		print("reading");
 		LiveDataPoint point = null;
 		while (true) {
+			switch (test_mode) {
+				case _test_mode.none:
+					break;
+				case _test_mode.calm:
+					avgPulse = 70;
+					base_rate = 70;
+					yield return new WaitForSeconds(1.0f / measurements_per_second);
+					continue;
+				case _test_mode.afraid:
+					avgPulse = 80;
+					base_rate = 70;
+					yield return new WaitForSeconds(1.0f / measurements_per_second);
+					continue;
+			}
 			point = listener.latest;
 			if (point != null) {
 				connected = true;

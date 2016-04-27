@@ -27,6 +27,13 @@ public class demonStateWandering : StateMachineBehaviour {
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
+		float fearscale = HBListener.Instance.avgPulse / (float)HBListener.Instance.base_rate;
+
+		if (fearscale < 1.05f) {//if under 5% scared, go idle
+			animator.SetBool("is_active", false);
+			return;
+		}
+
 		if (eatPlayer.killed) {
 			return;
 		}
