@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour {
 
     private Canvas can;
-    private bool active;
+    public bool active = true;
 	// Use this for initialization
 	void Start () {
         can = GetComponent<Canvas>();
@@ -20,10 +20,12 @@ public class Menu : MonoBehaviour {
         }
         if (active)
         {
+            Time.timeScale = 0;
             can.enabled = true;
         }
         else
         {
+            Time.timeScale = 1;
             can.enabled = false;
         }
 
