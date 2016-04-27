@@ -23,7 +23,12 @@ public class rootMotionHandler : MonoBehaviour {
 		troot.position = newPosition;
 
 		//need this to apply root motion for navmesh agent
-		agent.velocity = anim.deltaPosition / Time.deltaTime;
+
+        
+        float dtime = Mathf.Approximately(Time.deltaTime,0) ? 1 : Time.deltaTime; 
+        agent.velocity = anim.deltaPosition / dtime;
+                
+        
 
 	}
 }
