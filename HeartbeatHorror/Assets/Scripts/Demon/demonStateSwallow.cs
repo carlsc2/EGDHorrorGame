@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class demonStateSwallow : StateMachineBehaviour {
 
@@ -17,6 +18,9 @@ public class demonStateSwallow : StateMachineBehaviour {
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		blackscreen.color = Color.Lerp(blackscreen.color, Color.black, Time.deltaTime);
+		if(blackscreen.color.a >= .98f) {
+			SceneManager.LoadScene("youlose");
+		}
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state

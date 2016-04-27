@@ -7,6 +7,7 @@ public class eatPlayer : MonoBehaviour {
 	private Transform player;
 	public Transform mouth;
 	Animator anim;
+	private Vector3 eatpos;
 
 	void Start() {
 		player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -24,9 +25,8 @@ public class eatPlayer : MonoBehaviour {
 
 	void Update() {
 		if (killed) {
-			Vector3 tmppos = player.position + player.transform.forward * 2/3f;
-			tmppos.y = -0.22f;
-			transform.root.position = Vector3.Lerp(transform.root.position, tmppos, Time.deltaTime * 5);
+			
+			transform.root.position = Vector3.Lerp(transform.root.position, eatpos, Time.deltaTime * 5);
 
 			Vector3 lookPos = player.position - transform.root.position;
 			lookPos.y = 0;
@@ -64,6 +64,10 @@ public class eatPlayer : MonoBehaviour {
 		player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
 		player.GetComponentInChildren<LanternAngle>().drop_lantern();
 		killed = true;
+
+		eatpos = player.position + player.transform.forward * 2 / 3f;
+		eatpos.y = player.position.y - 1.22f;
+
 		anim.SetLayerWeight(1, 0);
 		anim.SetLayerWeight(2, 0);
 		anim.SetLayerWeight(3, 0);
