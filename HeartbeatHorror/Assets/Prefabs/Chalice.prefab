@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3390878}
   - 23: {fileID: 2371786}
   - 135: {fileID: 13554430}
+  - 114: {fileID: 11431180}
   m_Layer: 0
   m_Name: Chalice
   m_TagString: Goblet
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124562}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -25.13, y: 1.85, z: 9.82}
+  m_LocalPosition: {x: -30.313007, y: 0.556137, z: -12.10165}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_LocalEulerAnglesHint: {x: -89.980194, y: 0, z: 0}
   m_Children: []
@@ -64,6 +65,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124562}
   m_Mesh: {fileID: 4300000, guid: 180aec446a5cc3745b4f86283e69f77c, type: 3}
+--- !u!114 &11431180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9478ddeec664b84f91e63b736b1fe5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_type: 2
 --- !u!135 &13554430
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -71,7 +84,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124562}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.01

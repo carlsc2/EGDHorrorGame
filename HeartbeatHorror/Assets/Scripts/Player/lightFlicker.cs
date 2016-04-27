@@ -27,7 +27,8 @@ public class lightFlicker : MonoBehaviour {
 	}
 
 	void Update() {
-		light.color = Color.Lerp(lightcolor, inverted_lightcolor, candleMat.GetFloat("_Color"));
+		Color tmp = Color.Lerp(lightcolor, inverted_lightcolor, candleMat.GetFloat("_Color"));
+		light.color = Color.Lerp(tmp, Color.green, candleMat.GetFloat("_Green"));
 		light.intensity = target_intensity;//Mathf.Lerp(light.intensity, target_intensity, 1f);
 	}
 

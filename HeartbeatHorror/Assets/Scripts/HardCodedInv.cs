@@ -7,50 +7,22 @@ Ring
 */
 
  public class HardCodedInv : MonoBehaviour {
-     public enum Artifact
-     {
-         Skull = 0,
-         Goblet = 1,
-         Dagger = 2,
-         Ring = 3
+	public bool HasRing, HasGoblet, HasDagger, HasSkull = false;
 
-     };
-     public bool HasRing, HasGoblet, HasDagger, HasSkull = false;
-	// Use this for initialization
-	void Start () {
-	
+	public void ItemPickup(Item.itemType item) {
+		switch (item) {
+			case Item.itemType.Dagger:
+				HasDagger = true;
+				break;
+			case Item.itemType.Ring:
+				HasRing = true;
+				break;
+			case Item.itemType.Skull:
+				HasSkull = true;
+				break;
+			case Item.itemType.Goblet:
+				HasGoblet = true;
+				break;
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Ring")
-        {
-            HasRing = true;
-            Destroy(other.gameObject);
-
-
-        }
-        if (other.gameObject.tag == "Skull")
-        {
-            HasSkull = true;
-            Destroy(other.gameObject);
-
-        }
-        if (other.gameObject.tag == "Goblet")
-        {
-            HasGoblet = true;
-            Destroy(other.gameObject);
-
-        }
-        if (other.gameObject.tag == "Dagger")
-        {
-            HasDagger = true;
-            Destroy(other.gameObject);
-        } 
-    }
-
 }

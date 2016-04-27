@@ -134,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.081787, y: 0, z: 11.878113}
+  m_LocalPosition: {x: -26.283373, y: 0.5, z: -9.491646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -194,7 +194,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a3384ef3e2313034f9016ad8a1f3999f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -240,8 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9068c7ed667ad140adb7c1239787daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  artifact: 3
+  item: {fileID: 161556, guid: a178db047e4753d43b27731ff8b79102, type: 2}
+  artifact: 4
   temp: {fileID: 0}
 --- !u!114 &11455054
 MonoBehaviour:
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 183854, guid: d01464ff3ea50f14c9314cd69749dc21, type: 2}
-  artifact: 0
+  artifact: 1
   temp: {fileID: 0}
 --- !u!114 &11468990
 MonoBehaviour:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 158924, guid: d4e5f39a6b894fc4c9e950fc0767d06c, type: 2}
-  artifact: 2
+  artifact: 3
   temp: {fileID: 0}
 --- !u!135 &13509222
 SphereCollider:

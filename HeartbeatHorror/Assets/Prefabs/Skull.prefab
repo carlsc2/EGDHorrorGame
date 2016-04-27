@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3332356}
   - 23: {fileID: 2388896}
   - 135: {fileID: 13549060}
+  - 114: {fileID: 11414170}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Skull
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183854}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -25.624, y: 1.668, z: 10.156}
+  m_LocalPosition: {x: -25.019835, y: 0.20482616, z: -16.851812}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_LocalEulerAnglesHint: {x: -89.980194, y: 0, z: 0}
   m_Children: []
@@ -64,6 +65,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183854}
   m_Mesh: {fileID: 4300000, guid: bfedde703e5f94b4a95428a32dc917f9, type: 3}
+--- !u!114 &11414170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9478ddeec664b84f91e63b736b1fe5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_type: 1
 --- !u!135 &13549060
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -74,7 +87,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.03
+  m_Radius: 0.04
   m_Center: {x: 0, y: -0.0014327599, z: -0.000621518}
 --- !u!1001 &100100000
 Prefab:

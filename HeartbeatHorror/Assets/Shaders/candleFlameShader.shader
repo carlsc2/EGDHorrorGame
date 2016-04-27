@@ -3,6 +3,7 @@
 	Properties
 	{
 		_Color ("Color", Range(0.0, 1.0)) = 1.0
+		_Green("Green", Range(0.0, 1.0)) = 0.0
 	}
 	SubShader
 	{
@@ -35,6 +36,7 @@
 			};
 
 			uniform float _Color;
+			uniform float _Green;
 
 			
 			v2f vert(appdata v) {
@@ -108,6 +110,7 @@
 
 
 				col = lerp(col,col.zyx,_Color);
+				col = lerp(col,float3(0,1,0),_Green);
 
 				float a = c * (1. - pow(uv.y, 3.));
 
