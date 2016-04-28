@@ -57,11 +57,13 @@ public class HBListener : Singleton<HBListener> {
 				case _test_mode.none:
 					break;
 				case _test_mode.calm:
+					outPulse = 70;
 					avgPulse = 70;
 					base_rate = 70;
 					yield return new WaitForSeconds(1.0f / measurements_per_second);
 					continue;
 				case _test_mode.afraid:
+					outPulse = 80;
 					avgPulse = 80;
 					base_rate = 70;
 					yield return new WaitForSeconds(1.0f / measurements_per_second);

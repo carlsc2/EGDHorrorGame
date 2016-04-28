@@ -27,10 +27,10 @@ public class demonStateSearching : StateMachineBehaviour {
 			Vector3 playerpoint = db.player.position;
 			Vector3 wanderpoint = (Vector3)(Random.insideUnitCircle * searchDistance) + tpos;
 
-			wanderpoint = Vector3.Lerp(wanderpoint, playerpoint, fear_weight);
+			wanderpoint = Vector3.Lerp(wanderpoint, playerpoint, fear_weight/2);
 
 			NavMeshHit nhit;
-			if (NavMesh.SamplePosition(wanderpoint, out nhit, searchDistance, 1)) {
+			if (NavMesh.SamplePosition(wanderpoint, out nhit, 30, 1)) {
 				Debug.DrawLine(db.transform.position, wanderpoint, Color.cyan);
 				NavMeshPath path = new NavMeshPath();
 				if (!db.agent.CalculatePath(nhit.position, path)) {
