@@ -1,0 +1,266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: lookaround
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 339.9469, z: 0}
+        inSlope: {x: 360, y: 0.0007324219, z: 0}
+        outSlope: {x: 360, y: 0.0007324219, z: 0}
+        tangentMode: 0
+      - time: 0.16666667
+        value: {x: 60, y: 339.94702, z: 0}
+        inSlope: {x: 144, y: 0.00029296876, z: 0}
+        outSlope: {x: 144, y: 0.00029296876, z: 0}
+        tangentMode: 0
+      - time: 1
+        value: {x: 0, y: 339.9469, z: 0}
+        inSlope: {x: -36, y: -0.00007324219, z: 0}
+        outSlope: {x: -36, y: -0.00007324219, z: 0}
+        tangentMode: 0
+      - time: 2
+        value: {x: 0, y: 339.9469, z: 0}
+        inSlope: {x: -179.99991, y: 0.0002746581, z: 0}
+        outSlope: {x: -179.99991, y: 0.0002746581, z: 0}
+        tangentMode: 0
+      - time: 2.1666667
+        value: {x: -60, y: 339.947, z: 0}
+        inSlope: {x: -143.99991, y: 0.00023803698, z: 0}
+        outSlope: {x: -143.99991, y: 0.00023803698, z: 0}
+        tangentMode: 0
+      - time: 3
+        value: {x: 0, y: 339.94693, z: 0}
+        inSlope: {x: 36.000004, y: -0.000051854502, z: 0}
+        outSlope: {x: 36.000004, y: -0.000051854502, z: 0}
+        tangentMode: 0
+      - time: 4.0016665
+        value: {x: 0, y: 339.9469, z: 0}
+        inSlope: {x: 0, y: -0.000030466805, z: 0}
+        outSlope: {x: 0, y: -0.000030466805, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 6
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 2006305929
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 4.0016665
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 360
+        outSlope: 360
+        tangentMode: 10
+      - time: 0.16666667
+        value: 60
+        inSlope: 144
+        outSlope: 144
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: -36
+        outSlope: -36
+        tangentMode: 10
+      - time: 2
+        value: 0
+        inSlope: -179.99991
+        outSlope: -179.99991
+        tangentMode: 10
+      - time: 2.1666667
+        value: -60
+        inSlope: -143.99991
+        outSlope: -143.99991
+        tangentMode: 10
+      - time: 3
+        value: 0
+        inSlope: 36.000004
+        outSlope: 36.000004
+        tangentMode: 10
+      - time: 4.0016665
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 339.9469
+        inSlope: 0.0007324219
+        outSlope: 0.0007324219
+        tangentMode: 10
+      - time: 0.16666667
+        value: 339.94702
+        inSlope: 0.00029296876
+        outSlope: 0.00029296876
+        tangentMode: 10
+      - time: 1
+        value: 339.9469
+        inSlope: -0.00007324219
+        outSlope: -0.00007324219
+        tangentMode: 10
+      - time: 2
+        value: 339.9469
+        inSlope: 0.0002746581
+        outSlope: 0.0002746581
+        tangentMode: 10
+      - time: 2.1666667
+        value: 339.947
+        inSlope: 0.00023803698
+        outSlope: 0.00023803698
+        tangentMode: 10
+      - time: 3
+        value: 339.94693
+        inSlope: -0.000051854502
+        outSlope: -0.000051854502
+        tangentMode: 10
+      - time: 4.0016665
+        value: 339.9469
+        inSlope: -0.000030466805
+        outSlope: -0.000030466805
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.16666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2.1666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 3
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 4.0016665
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest
+    classID: 4
+    script: {fileID: 0}
+  m_EulerEditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Monster_Controls:Monster_Rig_0002:Root/Monster_Controls:Monster_Rig_0002:Hip/Monster_Controls:Monster_Rig_0002:Spine1/Monster_Controls:Monster_Rig_0002:Spine2/Monster_Controls:Monster_Rig_0002:Chest
+    classID: 4
+    script: {fileID: 0}
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events: []

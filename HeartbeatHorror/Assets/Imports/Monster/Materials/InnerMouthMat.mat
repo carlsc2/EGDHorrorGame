@@ -24,6 +24,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _AlphaTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _BumpMap
         second:
           m_Texture: {fileID: 0}
@@ -93,16 +100,16 @@ Material:
         second: 0.5
       data:
         first:
-          name: _Glossiness
-        second: 0
+          name: _Parallax
+        second: 0.02
       data:
         first:
           name: _Metallic
         second: 1
       data:
         first:
-          name: _Parallax
-        second: 0.02
+          name: _Glossiness
+        second: 0
       data:
         first:
           name: _ZWrite
@@ -131,6 +138,10 @@ Material:
         first:
           name: _Emission
         second: 1
+      data:
+        first:
+          name: _threshold
+        second: 0.5
     m_Colors:
       data:
         first:

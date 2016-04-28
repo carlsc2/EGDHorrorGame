@@ -6,7 +6,7 @@ public class RitualSlot : MonoBehaviour {
 	public Item.itemType artifact;
 	private HardCodedInv inv;
 	public GameObject temp;
-	bool itemInSlot;
+	public bool itemInSlot;
 
 	void Awake() {
 		inv = FindObjectOfType<HardCodedInv>();
@@ -25,7 +25,6 @@ public class RitualSlot : MonoBehaviour {
 					temp = (GameObject)GameObject.Instantiate(item, gameObject.transform.position, Quaternion.identity);
 					temp.GetComponent<SphereCollider>().enabled = false;
 					itemInSlot = true;
-					// gameObject.GetComponent<RitualSlot>().enabled = false;
 
 				}
 				if (inv.HasSkull && artifact == Item.itemType.Skull)
