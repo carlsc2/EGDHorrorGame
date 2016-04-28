@@ -217,6 +217,48 @@ ModelImporter:
     4300078: BasementStair3_ID75
     4300080: BackPillar_Base_ID748
     4300082: Floor1_foyer_ID399
+    6400000: BackPillar_Base_ID748
+    6400002: BackPillar_Column_ID756
+    6400004: BackStairs_ID333
+    6400006: Basement_Floor_ID5
+    6400008: BasementFloor_ID39
+    6400010: BasementRoom_S_wall_ID26
+    6400012: BasementStair1_ID75
+    6400014: BasementStair2_ID75
+    6400016: BasementStair3_ID75
+    6400018: BasementStair4_ID75
+    6400020: BasementStair5_ID75
+    6400022: BasementStair6_ID75
+    6400024: BasementStair7_ID75
+    6400026: BasementStairHole_ID633
+    6400028: BasementStairSide2_ID65
+    6400030: Basket_ID112
+    6400032: Floor1_all_ID874
+    6400034: Floor1_foyer_ID399
+    6400036: Floor1_Kitchen_ID294
+    6400038: Floor1_Room1_ID848
+    6400040: Floor1_Room2_ID868
+    6400042: Floor1_Room3_ID704
+    6400044: Floor2_Balcony_ID539
+    6400046: Floor2_Floorpiece1_ID860
+    6400048: Floor2_Floorpiece2_ID826
+    6400050: Floor2_Floorpiece3_ID813
+    6400052: Floor2_foyer_ID679
+    6400054: Floor2_Room1_ID673
+    6400056: Floor2_Room2_ID260
+    6400058: Floor2_Room3_ID234
+    6400060: FrontOverhang_ID603
+    6400062: FrontPillar1_Base_ID732
+    6400064: FrontPillar1_Column_ID724
+    6400066: FrontPillar2_Base_ID740
+    6400068: FrontPillar2_Column_ID764
+    6400070: FrontSteps_ID226
+    6400072: OuterShell_ID213
+    6400074: OutisdeRoom_Floor_ID772
+    6400076: OutsideRoom_Interior_ID362
+    6400078: Roof_ID95
+    6400080: StairPart1_ID378
+    6400082: StairPart2_ID413
   materials:
     importMaterials: 1
     materialName: 0
@@ -241,9 +283,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 1.5
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

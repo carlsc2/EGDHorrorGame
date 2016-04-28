@@ -17,6 +17,8 @@ ModelImporter:
     3300002: StairPart3
     4300000: Floor1_Foyer_BalconyRoof
     4300002: StairPart3
+    6400000: Floor1_Foyer_BalconyRoof
+    6400002: StairPart3
   materials:
     importMaterials: 1
     materialName: 0
@@ -41,9 +43,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 1.5
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
