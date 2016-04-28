@@ -302,6 +302,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 407456}
   - 95: {fileID: 9524764}
+  - 136: {fileID: 13694742}
   m_Layer: 0
   m_Name: dummymonster
   m_TagString: Untagged
@@ -532,6 +533,21 @@ GameObject:
   - 4: {fileID: 405724}
   m_Layer: 0
   m_Name: Monster_Controls:Monster_Rig_0002:LeftFoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &137144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 431368}
+  m_Layer: 0
+  m_Name: playerlook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1179,6 +1195,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &192950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 436278}
+  m_Layer: 0
+  m_Name: playerstand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &194440
 GameObject:
   m_ObjectHideFlags: 1
@@ -1698,6 +1729,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 429496}
   m_RootOrder: 0
+--- !u!4 &431368
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 464672}
+  m_RootOrder: 9
 --- !u!4 &432818
 Transform:
   m_ObjectHideFlags: 1
@@ -1737,6 +1781,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 410416}
   m_RootOrder: 0
+--- !u!4 &436278
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.55, z: -4.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 464672}
+  m_RootOrder: 8
 --- !u!4 &438358
 Transform:
   m_ObjectHideFlags: 1
@@ -2059,6 +2116,8 @@ Transform:
   - {fileID: 446230}
   - {fileID: 403838}
   - {fileID: 407456}
+  - {fileID: 436278}
+  - {fileID: 431368}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &465130
@@ -2630,6 +2689,8 @@ MonoBehaviour:
   rift: {fileID: 19865678}
   implosion: {fileID: 19891360}
   dummymonster: {fileID: 119254}
+  playerstandpoint: {fileID: 436278}
+  playerlook: {fileID: 431368}
 --- !u!135 &13509222
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2678,6 +2739,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &13694742
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.8
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!137 &13703280
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -6185,7 +6259,7 @@ ParticleSystem:
   looping: 0
   prewarm: 0
   playOnAwake: 1
-  moveWithTransform: 1
+  moveWithTransform: 0
   scalingMode: 1
   InitialModule:
     serializedVersion: 2

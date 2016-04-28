@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalScene.unity
   - enabled: 1
     path: Assets/Scenes/youlose.unity
+  - enabled: 1
+    path: Assets/Scenes/youwin.unity
