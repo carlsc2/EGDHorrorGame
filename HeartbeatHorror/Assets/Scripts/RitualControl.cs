@@ -18,6 +18,7 @@ public class RitualControl : MonoBehaviour {
 	private UnityStandardAssets.Characters.FirstPerson.MouseLook ml;
 
 	public Transform playerlook;
+	private AudioSource aso;
 
 	// Update is called once per frame
 	void Update () {
@@ -37,6 +38,8 @@ public class RitualControl : MonoBehaviour {
 	}
 
 	IEnumerator complete_ritual() {
+
+		aso = GetComponent<AudioSource>();
 
 		//move player to position
 
@@ -123,7 +126,12 @@ public class RitualControl : MonoBehaviour {
 		//workaround.... use playonawake
 		implosion.gameObject.SetActive(true);
 
-		yield return new WaitForSeconds(1.867f);
+		yield return new WaitForSeconds(1);
+
+		//monster scream
+		aso.Play();
+
+		yield return new WaitForSeconds(0.867f);
 		dummymonster.SetActive(false);
 
 		
