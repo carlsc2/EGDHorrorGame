@@ -14,6 +14,7 @@ ModelImporter:
     2300000: SketchUp
     3300000: SketchUp
     4300000: SketchUp
+    6400000: SketchUp
   materials:
     importMaterials: 1
     materialName: 0
@@ -40,7 +41,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

@@ -37,10 +37,16 @@ ModelImporter:
     4300006: Leg_3
     4300008: Cushion
     4300010: Leg_1
+    6400000: Chairseatback
+    6400002: Cushion
+    6400004: Leg_1
+    6400006: Leg_2
+    6400008: Leg_3
+    6400010: Leg_4
   materials:
     importMaterials: 1
-    materialName: 0
-    materialSearch: 1
+    materialName: 1
+    materialSearch: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -63,7 +69,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
