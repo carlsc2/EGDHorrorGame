@@ -4,7 +4,7 @@ using System.Collections;
 public class DoorCollider : MonoBehaviour {
 
 
-    public bool PlayerHit;
+	public bool PlayerHit;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,18 +14,18 @@ public class DoorCollider : MonoBehaviour {
 	void Update () {
 	
 	}
-    void OnTriggerEnter(Collider other){
-        if (other.tag == "Player")
-        {
-            PlayerHit = true;
-        }
-    }
+	void OnTriggerEnter(Collider other){
+		if (other.tag == "Player")
+		{
+			PlayerHit = true;
+		}
+	}
 
-    void OnTriggerExit(Collider other) 
-    {
-        if (other.tag == "Player")
-        {
-            PlayerHit = false;
-        }
-    }
+	void OnTriggerExit(Collider other) 
+	{
+		if (other.tag == "Player")
+		{
+			PlayerHit = false;
+		}
+	}
 }
