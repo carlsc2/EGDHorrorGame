@@ -69,7 +69,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &101940
 GameObject:
@@ -561,7 +561,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &117300
 GameObject:
@@ -704,7 +704,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &120596
 GameObject:
@@ -1101,7 +1101,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &133844
 GameObject:
@@ -1261,7 +1261,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &138922
 GameObject:
@@ -1628,7 +1628,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &150802
 GameObject:
@@ -1717,7 +1717,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &154548
 GameObject:
@@ -2854,6 +2854,7 @@ GameObject:
   - 135: {fileID: 13550618}
   - 95: {fileID: 9579658}
   - 114: {fileID: 11495822}
+  - 114: {fileID: 11475146}
   m_Layer: 0
   m_Name: FrontDoor
   m_TagString: Untagged
@@ -3067,7 +3068,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &183802
 GameObject:
@@ -13859,7 +13860,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -13933,7 +13934,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -14792,7 +14793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7225e52de4ca1a4418bf3ec861765850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: c4cb6cb5dfb35a94892169d704c93642, type: 3}
+  sound: {fileID: 8300000, guid: 7d91488cbd030da4391dec8f7a658b6c, type: 3}
   source: {fileID: 0}
   triggerEvent:
     m_PersistentCalls:
@@ -14813,6 +14814,7 @@ MonoBehaviour:
   triggerRate: 1
   playAfterDelay: 0
   delay: 0
+  minimumInterval: 0
   playOnEnter: 1
   eventTrigger: 1
   playOnRate: 0
@@ -15031,6 +15033,18 @@ MonoBehaviour:
   farDist: 20
   flameObj: {fileID: 164380}
   alertdist: 20
+--- !u!114 &11475146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000f04b552ab085409a0acc6954c6b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerHit: 0
 --- !u!114 &11477978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15124,7 +15138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7225e52de4ca1a4418bf3ec861765850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: c4cb6cb5dfb35a94892169d704c93642, type: 3}
+  sound: {fileID: 8300000, guid: 7d91488cbd030da4391dec8f7a658b6c, type: 3}
   source: {fileID: 0}
   triggerEvent:
     m_PersistentCalls:
@@ -15145,6 +15159,7 @@ MonoBehaviour:
   triggerRate: 1
   playAfterDelay: 0
   delay: 0
+  minimumInterval: 0
   playOnEnter: 1
   eventTrigger: 1
   playOnRate: 0
@@ -15222,6 +15237,8 @@ MonoBehaviour:
   LeftControl: {fileID: 0}
   RightControl: {fileID: 0}
   anim: {fileID: 0}
+  timer: 3
+  startTimer: 0
 --- !u!114 &11496976
 MonoBehaviour:
   m_ObjectHideFlags: 1
