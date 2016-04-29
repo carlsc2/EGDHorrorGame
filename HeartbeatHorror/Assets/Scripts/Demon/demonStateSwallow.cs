@@ -5,13 +5,21 @@ using UnityEngine.SceneManagement;
 public class demonStateSwallow : StateMachineBehaviour {
 
 	private Image blackscreen;
+	private UnityStandardAssets.Characters.FirstPerson.MouseLook ml;
+	private Transform pcamera;
+	private Transform player;
 
-	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		player = GameObject.FindGameObjectWithTag("Player").transform;
 		GameObject stomach = GameObject.FindGameObjectWithTag("Finish");
-		player.transform.position = stomach.transform.position;
+		pcamera = player.GetComponentInChildren<Camera>().transform;
+
+		player.position = stomach.transform.position;
 		blackscreen = GameObject.FindGameObjectWithTag("blackscreen").GetComponent<Image>();
+
+		ml = new UnityStandardAssets.Characters.FirstPerson.MouseLook();
+		ml.Init(player, pcamera);
 
 	}
 
@@ -21,6 +29,8 @@ public class demonStateSwallow : StateMachineBehaviour {
 		if(blackscreen.color.a >= .98f) {
 			SceneManager.LoadScene("youlose");
 		}
+		ml.LookRotation(player, pcamera);
+
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
