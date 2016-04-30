@@ -13,6 +13,9 @@ ModelImporter:
     100010: Roof_Inner1
     100012: Roof_Outer1
     100014: //RootNode
+    100016: Roof
+    100018: Stable Main
+    100020: Stall Betweens
     400000: Lisanne1
     400002: Mesh1
     400004: Mesh2
@@ -21,22 +24,37 @@ ModelImporter:
     400010: Roof_Inner1
     400012: Roof_Outer1
     400014: //RootNode
+    400016: Roof
+    400018: Stable Main
+    400020: Stall Betweens
     2300000: Mesh1
     2300002: Mesh2
     2300004: Mesh3
     2300006: Mesh4
+    2300008: Roof
+    2300010: Stable Main
+    2300012: Stall Betweens
     3300000: Mesh1
     3300002: Mesh2
     3300004: Mesh3
     3300006: Mesh4
+    3300008: Roof
+    3300010: Stable Main
+    3300012: Stall Betweens
     4300000: Mesh1
     4300002: Mesh2
     4300004: Mesh3
     4300006: Mesh4
+    4300008: Stall Betweens
+    4300010: Stable Main
+    4300012: Roof
     6400000: Mesh1
     6400002: Mesh2
     6400004: Mesh3
     6400006: Mesh4
+    6400008: Roof
+    6400010: Stable Main
+    6400012: Stall Betweens
   materials:
     importMaterials: 1
     materialName: 0
@@ -61,7 +79,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 150
+    globalScale: 1
     meshCompression: 0
     addColliders: 1
     importBlendShapes: 1

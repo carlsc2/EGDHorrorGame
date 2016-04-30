@@ -9,8 +9,8 @@ public class DemonBehavior : MonoBehaviour {
 	public AudioSource aso;
 	[HideInInspector]
 	public Transform player;
-
-	private UnityStandardAssets.Characters.FirstPerson.FirstPersonController pcontrol;
+	[HideInInspector]
+	public UnityStandardAssets.Characters.FirstPerson.FirstPersonController pcontrol;
 	
 	public AudioSource screamsound;
 
