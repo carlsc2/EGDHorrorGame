@@ -195,7 +195,7 @@ public class DemonBehavior : MonoBehaviour {
 
 		Color eyecolor = eyeMat.GetColor("_EmissionColor");
 		Color targetcolor = playerInSight ? Color.red : Color.white;
-		int brightval = playerInRange ? 1 : 0;
+		float brightval = playerInRange ? 1.5f : 0.5f;
 		eyeMat.SetColor("_EmissionColor", Color.Lerp(eyecolor, targetcolor * brightval, Time.deltaTime));
 	}
 

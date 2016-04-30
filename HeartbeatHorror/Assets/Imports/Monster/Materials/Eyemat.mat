@@ -54,7 +54,7 @@ Material:
         first:
           name: _EmissionMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 9e86dc609073c33419fe9e7f19002e46, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -78,6 +78,13 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -94,11 +101,11 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 0.767
+        second: 1
       data:
         first:
           name: _Metallic
-        second: 0
+        second: 1
       data:
         first:
           name: _Parallax
@@ -122,7 +129,7 @@ Material:
       data:
         first:
           name: _UVSec
-        second: 0
+        second: 1
       data:
         first:
           name: _Mode
@@ -131,8 +138,12 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 1.5, g: 1.5, b: 1.5, a: 1}
       data:
         first:
           name: _Color
+        second: {r: 1, g: 1, b: 1, a: 0}
+      data:
+        first:
+          name: _SpecColor
         second: {r: 1, g: 1, b: 1, a: 1}
