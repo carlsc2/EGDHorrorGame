@@ -30,7 +30,7 @@ public class RitualControl : MonoBehaviour {
 
 	IEnumerator let_look(Transform player, Transform cam) {
 		ml = new UnityStandardAssets.Characters.FirstPerson.MouseLook();
-		ml.Init(transform, cam);
+		ml.Init(player, cam);
 		while (true) {
 			ml.LookRotation(player, cam);
 			yield return null;
