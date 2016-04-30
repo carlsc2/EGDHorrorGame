@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
+using UnityEngine.VR;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
@@ -240,6 +241,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		private void RotateView()
 		{
+            if (VRDevice.isPresent)
+            {
+                
+            }
 			m_MouseLook.LookRotation (transform, m_Camera.transform);
 		}
 
