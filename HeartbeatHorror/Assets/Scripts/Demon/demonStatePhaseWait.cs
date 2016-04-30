@@ -6,6 +6,8 @@ public class demonStatePhaseWait : StateMachineBehaviour {
 	private DemonBehavior db;
 	private bool phased;
 
+	public static float last_enter_time = -1000;
+
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		db = animator.transform.root.GetComponent<DemonBehavior>();
@@ -18,8 +20,10 @@ public class demonStatePhaseWait : StateMachineBehaviour {
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		if (!phased) {
-			float fearscale = HBListener.Instance.avgPulse / (float)HBListener.Instance.base_rate;
-			if (fearscale > 1.1f) {//if over 10% scared, phase in
+			//10% fear boost if running
+			float fearscale = HBListener.Instance.avgPulse / (float)HBListener.Instance.base_rate + (db.pcontrol.is_walking() ? 0 : 0.1f);
+			Debug.Log(fearscale);
+			if (fearscale >= 1.1f) {//if over 10% scared, phase in
 				Vector3 spawnpoint = Random.insideUnitSphere * Random.Range(db.wanderDistance,db.wanderDistance*2) + db.player.position;//random point near-ish to player but not too close
 				NavMeshHit hit;
 				Debug.DrawLine(db.transform.position, spawnpoint, Color.yellow);
@@ -30,6 +34,7 @@ public class demonStatePhaseWait : StateMachineBehaviour {
 					//db.transform.position = hit.position;
 					//db.agent.enabled = true;
 					animator.SetTrigger("phasein");
+					last_enter_time = Time.time;
 					phased = true;
 				}
 			}

@@ -1,60 +1,36 @@
 fileFormatVersion: 2
-guid: 17b73531af7bdad4482b9c61f8424ef1
-timeCreated: 1459293155
-licenseType: Pro
+guid: aaa1a294623bb5544812475c34580756
+timeCreated: 1461994396
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Lisanne1
-    100002: Mesh1
-    100004: Mesh2
-    100006: Mesh3
-    100008: Mesh4
-    100010: Roof_Inner1
-    100012: Roof_Outer1
-    100014: //RootNode
-    100016: Roof
-    100018: Stable Main
-    100020: Stall Betweens
-    400000: Lisanne1
-    400002: Mesh1
-    400004: Mesh2
-    400006: Mesh3
-    400008: Mesh4
-    400010: Roof_Inner1
-    400012: Roof_Outer1
-    400014: //RootNode
-    400016: Roof
-    400018: Stable Main
-    400020: Stall Betweens
-    2300000: Mesh1
-    2300002: Mesh2
-    2300004: Mesh3
-    2300006: Mesh4
-    2300008: Roof
-    2300010: Stable Main
-    2300012: Stall Betweens
-    3300000: Mesh1
-    3300002: Mesh2
-    3300004: Mesh3
-    3300006: Mesh4
-    3300008: Roof
-    3300010: Stable Main
-    3300012: Stall Betweens
-    4300000: Mesh1
-    4300002: Mesh2
-    4300004: Mesh3
-    4300006: Mesh4
-    4300008: Stall Betweens
-    4300010: Stable Main
-    4300012: Roof
-    6400000: Mesh1
-    6400002: Mesh2
-    6400004: Mesh3
-    6400006: Mesh4
-    6400008: Roof
-    6400010: Stable Main
-    6400012: Stall Betweens
+    100000: //RootNode
+    100002: Door
+    100004: Doorhandle
+    100006: DoorRing
+    100008: DoorRing2
+    400000: //RootNode
+    400002: Door
+    400004: Doorhandle
+    400006: DoorRing
+    400008: DoorRing2
+    2300000: Door
+    2300002: Doorhandle
+    2300004: DoorRing
+    2300006: DoorRing2
+    3300000: Door
+    3300002: Doorhandle
+    3300004: DoorRing
+    3300006: DoorRing2
+    4300000: DoorRing
+    4300002: Doorhandle
+    4300004: Door
+    4300006: DoorRing2
+    6400000: Door
+    6400002: Doorhandle
+    6400004: DoorRing
+    6400006: DoorRing2
   materials:
     importMaterials: 1
     materialName: 0

@@ -29,7 +29,7 @@ public class demonStateWandering : StateMachineBehaviour {
 
 		float fearscale = HBListener.Instance.avgPulse / (float)HBListener.Instance.base_rate;
 
-		if (fearscale < 1.05f) {//if under 5% scared, go idle
+		if (fearscale < 1.05f && Time.time - demonStatePhaseWait.last_enter_time > 30) {//if under 5% scared, phase out if not phased in in last 30s
 			animator.SetBool("is_active", false);
 			return;
 		}
