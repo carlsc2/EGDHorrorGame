@@ -24,7 +24,7 @@ ModelImporter:
     4300004: Blade
   materials:
     importMaterials: 1
-    materialName: 1
+    materialName: 0
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
