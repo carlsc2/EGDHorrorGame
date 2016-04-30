@@ -415,7 +415,7 @@ MonoBehaviour:
     adaptiveLODQuality: 0
     shadowTextureQuality: 4
     enableWelding: 1
-    enableAmbientOcclusion: 1
+    enableAmbientOcclusion: 0
     enableMaterialOptimize: 1
     aoDensity: 0
     rootSpread: 4
