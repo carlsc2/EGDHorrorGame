@@ -45,7 +45,7 @@ public class DoorTrigger : MonoBehaviour
         if (startTimer && timer > 0)
         {
             timer -= Time.deltaTime;
-            print(timer);
+            //print(timer);
         }
         else 
         {
