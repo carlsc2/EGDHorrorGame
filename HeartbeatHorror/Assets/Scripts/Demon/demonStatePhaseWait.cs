@@ -22,7 +22,7 @@ public class demonStatePhaseWait : StateMachineBehaviour {
 		if (!phased) {
 			//10% fear boost if running
 			float fearscale = HBListener.Instance.avgPulse / (float)HBListener.Instance.base_rate + (db.pcontrol.is_walking() ? 0 : 0.1f);
-			Debug.Log(fearscale);
+			//Debug.Log(fearscale);
 			if (fearscale >= 1.1f) {//if over 10% scared, phase in
 				Vector3 spawnpoint = Random.insideUnitSphere * Random.Range(db.wanderDistance,db.wanderDistance*2) + db.player.position;//random point near-ish to player but not too close
 				NavMeshHit hit;
