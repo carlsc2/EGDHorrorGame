@@ -243,10 +243,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		private void RotateView()
 		{
 			if (VRDevice.isPresent)
-			{
-				
-			}
-			m_MouseLook.LookRotation (transform, m_Camera.transform);
+            {
+                Vector3 newRot = new Vector3(transform.rotation.x, m_Camera.transform.rotation.eulerAngles.y, transform.rotation.z);
+                transform.rotation = Quaternion.Euler(newRot);
+                UnityEngine.VR.InputTracking.Recenter();
+            }
+            else
+            {
+                m_MouseLook.LookRotation(transform, m_Camera.transform);
+            }
+			
 		}
 
 
