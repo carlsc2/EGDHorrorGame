@@ -28,11 +28,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		[SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
 		[SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
 		[SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+        [SerializeField]
+        private Transform lanternChild;
+        [SerializeField] [Range(0f, 1f)] private float lanternLerp;
+        [SerializeField]
+        private LanternAngle lantern;
 
 		private Camera m_Camera;
 		private bool m_Jump;
 		private float m_YRotation;
 		private Vector2 m_Input;
+        private Vector2 m_camInput;
 		private Vector3 m_MoveDir = Vector3.zero;
 		private CharacterController m_CharacterController;
 		private CollisionFlags m_CollisionFlags;
@@ -101,8 +107,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		{
 			float speed;
 			GetInput(out speed);
-			// always move along the camera forward as it is the direction that it being aimed at
-			Vector3 desiredMove = transform.forward*m_Input.y + transform.right*m_Input.x;
+            // always move along the camera forward as it is the direction that it being aimed at
+            Vector3 cameraProjectedForward = (new Vector3(m_Camera.transform.forward.x, 0f, m_Camera.transform.forward.z)).normalized;
+            Vector3 cameraProjectedRight = (new Vector3(m_Camera.transform.right.x, 0f, m_Camera.transform.right.z)).normalized;
+            Vector3 desiredMove = cameraProjectedForward*m_Input.y + cameraProjectedRight*m_Input.x;
+
+            // update the lantern hinge
+            lantern.startPos = lantern.snapshotStartPos + cameraProjectedRight * m_camInput.x + Vector3.up * m_camInput.y;
+            lanternChild.transform.rotation = Quaternion.Slerp(lanternChild.transform.rotation, Quaternion.LookRotation(cameraProjectedForward, Vector3.up), lanternLerp);
 
 			// get a normal for the surface that is being touched to move along it
 			RaycastHit hitInfo;
@@ -212,7 +224,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
 			float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
-			bool waswalking = m_IsWalking;
+            float camHorizontal = CrossPlatformInputManager.GetAxis("Mouse X");
+            float camVertical = CrossPlatformInputManager.GetAxis("Mouse Y");
+
+            bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT
 			// On standalone builds, walk/run speed is modified by a key press.
@@ -222,7 +237,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #endif
 			// set the desired speed to be walking or running
 			speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
-			m_Input = new Vector2(horizontal, vertical);
+            m_Input = new Vector2(horizontal, vertical);
+            m_camInput = new Vector2(camHorizontal, camVertical);
 
 			// normalize input if it exceeds 1 in combined length:
 			if (m_Input.sqrMagnitude > 1)
@@ -242,16 +258,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		private void RotateView()
 		{
-			if (VRDevice.isPresent)
+			/*if (VRDevice.isPresent)
             {
                 Vector3 newRot = new Vector3(transform.rotation.x, m_Camera.transform.rotation.eulerAngles.y, transform.rotation.z);
                 transform.rotation = Quaternion.Euler(newRot);
                 UnityEngine.VR.InputTracking.Recenter();
             }
             else
-            {
+            {*/
                 m_MouseLook.LookRotation(transform, m_Camera.transform);
-            }
+            //}
 			
 		}
 
