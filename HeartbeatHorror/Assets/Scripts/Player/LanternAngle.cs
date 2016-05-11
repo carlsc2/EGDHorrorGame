@@ -27,10 +27,10 @@ public class LanternAngle : MonoBehaviour {
 			Vector3 tmp = startPos;
 			float h;
 			if (UnityEngine.VR.VRDevice.isPresent) {//reverse the direction in VR
-				h = startPos.y + Mathf.Clamp(cam.localRotation.x * 2, -1.5f, lanternLerp);
+				h = startPos.y + Mathf.Clamp(-cam.localRotation.x * 2, -1.5f, .5f);
 			}
 			else {
-				h = startPos.y - Mathf.Clamp(cam.localRotation.x * 2, -1.5f, lanternLerp);
+				h = startPos.y - Mathf.Clamp(cam.localRotation.x * 2, -1.5f, .5f);
 			}
 			tmp.y = h + heldHeight;
 			transform.localPosition = Vector3.Slerp(transform.localPosition, tmp, Time.deltaTime * 10);

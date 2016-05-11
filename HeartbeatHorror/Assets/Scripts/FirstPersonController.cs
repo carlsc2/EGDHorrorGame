@@ -33,6 +33,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] [Range(0f, 1f)] private float lanternLerp;
         [SerializeField]
         private LanternAngle lantern;
+        [SerializeField]
+        private float lanternXOffset = .5f;
+        [SerializeField]
+        private float lanternYOffset = 1f;
 
 		private Camera m_Camera;
 		private bool m_Jump;
@@ -113,7 +117,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             Vector3 desiredMove = cameraProjectedForward*m_Input.y + cameraProjectedRight*m_Input.x;
 
             // update the lantern hinge
-            lantern.startPos = lantern.snapshotStartPos + cameraProjectedRight * m_camInput.x + Vector3.up * m_camInput.y;
+            if (UnityEngine.VR.VRDevice.isPresent) {
+                lantern.startPos = lantern.snapshotStartPos + Vector3.right * m_camInput.x * lanternXOffset + Vector3.up * m_camInput.y * lanternYOffset;
+            }
             lanternChild.transform.rotation = Quaternion.Slerp(lanternChild.transform.rotation, Quaternion.LookRotation(cameraProjectedForward, Vector3.up), lanternLerp);
 
 			// get a normal for the surface that is being touched to move along it
